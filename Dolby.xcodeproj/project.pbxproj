@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2501044D1FDE9E1A0028A985 /* DyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2501044C1FDE9E1A0028A985 /* DyAnimation.m */; };
+		2505A1D61FE8020800407BED /* DyAssetExportSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A1D51FE8020800407BED /* DyAssetExportSession.swift */; };
+		2505A1D81FE8025300407BED /* DyExportURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A1D71FE8025300407BED /* DyExportURL.swift */; };
+		2505A1DA1FE8040C00407BED /* DyFixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A1D91FE8040C00407BED /* DyFixOrientation.swift */; };
 		25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */; };
 		25E24FAE1FE65735003C4EFB /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25E24FAD1FE65735003C4EFB /* 1.jpg */; };
 		25E24FB01FE68FBA003C4EFB /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 25E24FAF1FE68FBA003C4EFB /* star.png */; };
@@ -34,6 +37,9 @@
 /* Begin PBXFileReference section */
 		2501044B1FDE9E1A0028A985 /* DyAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyAnimation.h; sourceTree = "<group>"; };
 		2501044C1FDE9E1A0028A985 /* DyAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAnimation.m; sourceTree = "<group>"; };
+		2505A1D51FE8020800407BED /* DyAssetExportSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyAssetExportSession.swift; sourceTree = "<group>"; };
+		2505A1D71FE8025300407BED /* DyExportURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyExportURL.swift; sourceTree = "<group>"; };
+		2505A1D91FE8040C00407BED /* DyFixOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyFixOrientation.swift; sourceTree = "<group>"; };
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
 		25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyAnimationViewController.h; sourceTree = "<group>"; };
 		25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAnimationViewController.m; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 				25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */,
 				25E24FB81FE767CF003C4EFB /* DyReadAndWrite.h */,
 				25E24FB91FE767CF003C4EFB /* DyReadAndWrite.m */,
+				2505A1D51FE8020800407BED /* DyAssetExportSession.swift */,
+				2505A1D71FE8025300407BED /* DyExportURL.swift */,
+				2505A1D91FE8040C00407BED /* DyFixOrientation.swift */,
 			);
 			path = EditorTool;
 			sourceTree = "<group>";
@@ -251,13 +260,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2505A1D61FE8020800407BED /* DyAssetExportSession.swift in Sources */,
 				25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */,
 				25E24FBA1FE767CF003C4EFB /* DyReadAndWrite.m in Sources */,
 				962DF3C61FC058DD00B46309 /* ViewController.swift in Sources */,
 				25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */,
 				962DF3C41FC058DD00B46309 /* AppDelegate.swift in Sources */,
 				25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */,
+				2505A1DA1FE8040C00407BED /* DyFixOrientation.swift in Sources */,
 				2501044D1FDE9E1A0028A985 /* DyAnimation.m in Sources */,
+				2505A1D81FE8025300407BED /* DyExportURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
