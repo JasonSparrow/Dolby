@@ -35,7 +35,7 @@
     [self.assetReader startReading];
     
     /*
-     * 配置 AVAssetReader
+     * 配置 AVAssetWriter
      */
     
     NSURL *outputURL = [NSURL URLWithString:@""];

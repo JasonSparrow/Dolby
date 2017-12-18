@@ -25,7 +25,9 @@ class DyMergeVideo: NSObject {
         
         if let firstAsset = firstAsset, let secondAsset = secondAsset {
             
-            
+            /*
+             其中 AVMutableComposition 可以用来操作音频和视频的组合，AVMutableVideoComposition 可以用来对视频进行操作，AVMutableAudioMix 类是给视频添加音频的，AVMutableVideoCompositionInstruction和AVMutableVideoCompositionLayerInstruction 一般都是配合使用，用来给视频添加水印或者旋转视频方向，AVAssetExportSession 是用来进行视频导出操作的。
+             */
             //1.1  - 创建AVMutableComposition对象。这个对象将保存你的AVMutableCompositionTrack实例。
             let mixComposition:AVMutableComposition = AVMutableComposition()
             
@@ -60,12 +62,14 @@ class DyMergeVideo: NSObject {
             mainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeAdd(firstAsset.duration, secondAsset.duration))
             
             // 2.2
+            //修正方向
             let firstInstruction = DyFixOrientation.videoCompositionInstructionForTrack(track: firstTrack, asset: firstAsset)
             firstInstruction.setOpacity(0.0, at: firstAsset.duration)
             let secondInstruction = DyFixOrientation.videoCompositionInstructionForTrack(track: secondTrack!, asset: secondAsset)
             
-            // 2.3
+            // 2.3 设置修正之后的指令层
             mainInstruction.layerInstructions = [firstInstruction, secondInstruction]
+            
             //AVMutableVideoComposition：用来生成video的组合指令，包含多段instruction。可以决定最终视频的尺寸，裁剪需要在这里进行；
             let mainComposition = AVMutableVideoComposition()
             mainComposition.instructions = [mainInstruction]
@@ -90,7 +94,7 @@ class DyMergeVideo: NSObject {
             let url = DyExportURL.exportURL()
             
             // 5  - 创建导出器
-            DyAssetExportSession.exportSession(url: url as URL, mixComposition: mixComposition, mainComposition: mainComposition)
+            DyAssetExportSession.exportSession(url: url as URL, composition: mixComposition, videoComposition: mainComposition)
             
         }
     }

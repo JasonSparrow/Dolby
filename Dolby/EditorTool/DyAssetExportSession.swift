@@ -13,15 +13,16 @@ import AssetsLibrary
 class DyAssetExportSession: NSObject {
     
    
-    class func exportSession(url:URL, mixComposition:AVMutableComposition, mainComposition:AVMutableVideoComposition) {
+    class func exportSession(url:URL, composition:AVMutableComposition, videoComposition:AVMutableVideoComposition) {
         // 5  - 创建导出器
-        guard let exporter = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality) else {
+        guard let exporter = AVAssetExportSession(asset: composition, presetName: AVAssetExportPresetHighestQuality) else {
             return
         }
         exporter.outputURL = url as URL
         exporter.outputFileType = AVFileType.mov
         exporter.shouldOptimizeForNetworkUse = true
-        exporter.videoComposition = mainComposition
+        //设置需要导出的合成的视频
+        exporter.videoComposition = videoComposition
         
         // 6  - 执行导出
         exporter.exportAsynchronously(completionHandler: {
