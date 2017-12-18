@@ -1,19 +1,20 @@
 //
-//  DyBridege.m
+//  DyGenerateThumbnails.m
 //  Dolby
 //
-//  Created by hr on 2017/12/11.
+//  Created by hr on 2017/12/18.
 //  Copyright © 2017年 王腾飞. All rights reserved.
 //
 
-#import "DyBridege.h"
+#import "DyGenerateThumbnails.h"
 #import <UIKit/UIKit.h>
+#import <CoreMedia/CoreMedia.h>
 
-@interface DyBridege ()
+@interface DyGenerateThumbnails ()
 @property (nonatomic, strong)AVAssetImageGenerator *imageGenerator;
 @end
 
-@implementation DyBridege
+@implementation DyGenerateThumbnails
 
 - (void)generateThumbnails:(AVAsset *)asset {
     

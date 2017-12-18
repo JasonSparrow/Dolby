@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2501044D1FDE9E1A0028A985 /* DyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2501044C1FDE9E1A0028A985 /* DyAnimation.m */; };
-		25C173CE1FDE8C1000A64622 /* DyGenerateImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C173CD1FDE8C1000A64622 /* DyGenerateImage.swift */; };
-		25C173D21FDE8C6B00A64622 /* DyBridege.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C173D11FDE8C6B00A64622 /* DyBridege.m */; };
-		25E24FA91FE64CBC003C4EFB /* DyRamps.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FA81FE64CBC003C4EFB /* DyRamps.m */; };
 		25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */; };
 		25E24FAE1FE65735003C4EFB /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25E24FAD1FE65735003C4EFB /* 1.jpg */; };
 		25E24FB01FE68FBA003C4EFB /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 25E24FAF1FE68FBA003C4EFB /* star.png */; };
+		25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */; };
+		25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB61FE7677F003C4EFB /* DyGenerateThumbnails.m */; };
+		25E24FBA1FE767CF003C4EFB /* DyReadAndWrite.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB91FE767CF003C4EFB /* DyReadAndWrite.m */; };
 		25F778C71FE36F11006F4C29 /* 01_nebula.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25F778BA1FE36F11006F4C29 /* 01_nebula.mp4 */; };
 		25F778C81FE36F11006F4C29 /* 03_nebula.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25F778BB1FE36F11006F4C29 /* 03_nebula.mp4 */; };
 		25F778C91FE36F11006F4C29 /* 04_quasar.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25F778BC1FE36F11006F4C29 /* 04_quasar.mp4 */; };
@@ -34,16 +34,16 @@
 /* Begin PBXFileReference section */
 		2501044B1FDE9E1A0028A985 /* DyAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyAnimation.h; sourceTree = "<group>"; };
 		2501044C1FDE9E1A0028A985 /* DyAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAnimation.m; sourceTree = "<group>"; };
-		25C173CD1FDE8C1000A64622 /* DyGenerateImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyGenerateImage.swift; sourceTree = "<group>"; };
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
-		25C173D01FDE8C6B00A64622 /* DyBridege.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyBridege.h; sourceTree = "<group>"; };
-		25C173D11FDE8C6B00A64622 /* DyBridege.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyBridege.m; sourceTree = "<group>"; };
-		25E24FA71FE64CBC003C4EFB /* DyRamps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyRamps.h; sourceTree = "<group>"; };
-		25E24FA81FE64CBC003C4EFB /* DyRamps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyRamps.m; sourceTree = "<group>"; };
 		25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyAnimationViewController.h; sourceTree = "<group>"; };
 		25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAnimationViewController.m; sourceTree = "<group>"; };
 		25E24FAD1FE65735003C4EFB /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		25E24FAF1FE68FBA003C4EFB /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyMergeVideo.swift; sourceTree = "<group>"; };
+		25E24FB51FE7677F003C4EFB /* DyGenerateThumbnails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyGenerateThumbnails.h; sourceTree = "<group>"; };
+		25E24FB61FE7677F003C4EFB /* DyGenerateThumbnails.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyGenerateThumbnails.m; sourceTree = "<group>"; };
+		25E24FB81FE767CF003C4EFB /* DyReadAndWrite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyReadAndWrite.h; sourceTree = "<group>"; };
+		25E24FB91FE767CF003C4EFB /* DyReadAndWrite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyReadAndWrite.m; sourceTree = "<group>"; };
 		25F778BA1FE36F11006F4C29 /* 01_nebula.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 01_nebula.mp4; sourceTree = "<group>"; };
 		25F778BB1FE36F11006F4C29 /* 03_nebula.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 03_nebula.mp4; sourceTree = "<group>"; };
 		25F778BC1FE36F11006F4C29 /* 04_quasar.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04_quasar.mp4; sourceTree = "<group>"; };
@@ -77,14 +77,13 @@
 		25C173CC1FDE8B5900A64622 /* EditorTool */ = {
 			isa = PBXGroup;
 			children = (
-				25C173CD1FDE8C1000A64622 /* DyGenerateImage.swift */,
-				25C173D01FDE8C6B00A64622 /* DyBridege.h */,
-				25C173D11FDE8C6B00A64622 /* DyBridege.m */,
-				25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */,
+				25E24FB51FE7677F003C4EFB /* DyGenerateThumbnails.h */,
+				25E24FB61FE7677F003C4EFB /* DyGenerateThumbnails.m */,
 				2501044B1FDE9E1A0028A985 /* DyAnimation.h */,
 				2501044C1FDE9E1A0028A985 /* DyAnimation.m */,
-				25E24FA71FE64CBC003C4EFB /* DyRamps.h */,
-				25E24FA81FE64CBC003C4EFB /* DyRamps.m */,
+				25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */,
+				25E24FB81FE767CF003C4EFB /* DyReadAndWrite.h */,
+				25E24FB91FE767CF003C4EFB /* DyReadAndWrite.m */,
 			);
 			path = EditorTool;
 			sourceTree = "<group>";
@@ -157,6 +156,7 @@
 				962DF3C51FC058DD00B46309 /* ViewController.swift */,
 				25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */,
 				25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */,
+				25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */,
 				962DF3C71FC058DD00B46309 /* Main.storyboard */,
 				962DF3CA1FC058DD00B46309 /* Assets.xcassets */,
 				962DF3CC1FC058DD00B46309 /* LaunchScreen.storyboard */,
@@ -251,13 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */,
+				25E24FBA1FE767CF003C4EFB /* DyReadAndWrite.m in Sources */,
 				962DF3C61FC058DD00B46309 /* ViewController.swift in Sources */,
-				25C173D21FDE8C6B00A64622 /* DyBridege.m in Sources */,
-				25E24FA91FE64CBC003C4EFB /* DyRamps.m in Sources */,
+				25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */,
 				962DF3C41FC058DD00B46309 /* AppDelegate.swift in Sources */,
 				25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */,
 				2501044D1FDE9E1A0028A985 /* DyAnimation.m in Sources */,
-				25C173CE1FDE8C1000A64622 /* DyGenerateImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,7 +402,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uubee.sirbaylor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Dolby/EditorTool/Dolby-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dolby/Dolby-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,7 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uubee.sirbaylor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Dolby/EditorTool/Dolby-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Dolby/Dolby-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

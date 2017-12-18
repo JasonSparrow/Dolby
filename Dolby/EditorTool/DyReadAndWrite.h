@@ -1,13 +1,16 @@
 //
-//  DyRamps.h
+//  DyReadAndWrite.h
 //  Dolby
 //
-//  Created by hr on 2017/12/17.
+//  Created by hr on 2017/12/18.
 //  Copyright © 2017年 王腾飞. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface DyRamps : NSObject
+/*
+ 读取写入资源
+ */
+@interface DyReadAndWrite : NSObject
 
 @end
