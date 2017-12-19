@@ -26,6 +26,11 @@
 		2505A1FC1FE817D500407BED /* Ronald Reagan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1F01FE817D500407BED /* Ronald Reagan.m4a */; };
 		2505A2011FE8188300407BED /* DyAddBorderToVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2001FE8188300407BED /* DyAddBorderToVideo.m */; };
 		2505A2041FE8191300407BED /* DyOverlayToVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2031FE8191300407BED /* DyOverlayToVideo.m */; };
+		2505A20A1FE8E9F100407BED /* AVUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2071FE8E9F100407BED /* AVUtilities.swift */; };
+		2505A20D1FE8EEFF00407BED /* DyReverseVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A20C1FE8EEFF00407BED /* DyReverseVideo.m */; };
+		2505A2121FE8FF8200407BED /* input.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2111FE8FF8200407BED /* input.mov */; };
+		2505A2141FE8FFD200407BED /* DyReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2131FE8FFD200407BED /* DyReverseViewController.swift */; };
+		2505A2161FE9022B00407BED /* DyTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2151FE9022B00407BED /* DyTransitionViewController.swift */; };
 		25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */; };
 		25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */; };
 		25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB61FE7677F003C4EFB /* DyGenerateThumbnails.m */; };
@@ -60,6 +65,12 @@
 		2505A2001FE8188300407BED /* DyAddBorderToVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAddBorderToVideo.m; sourceTree = "<group>"; };
 		2505A2021FE8191300407BED /* DyOverlayToVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyOverlayToVideo.h; sourceTree = "<group>"; };
 		2505A2031FE8191300407BED /* DyOverlayToVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyOverlayToVideo.m; sourceTree = "<group>"; };
+		2505A2071FE8E9F100407BED /* AVUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVUtilities.swift; sourceTree = "<group>"; };
+		2505A20B1FE8EEFF00407BED /* DyReverseVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyReverseVideo.h; sourceTree = "<group>"; };
+		2505A20C1FE8EEFF00407BED /* DyReverseVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyReverseVideo.m; sourceTree = "<group>"; };
+		2505A2111FE8FF8200407BED /* input.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = input.mov; sourceTree = "<group>"; };
+		2505A2131FE8FFD200407BED /* DyReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyReverseViewController.swift; sourceTree = "<group>"; };
+		2505A2151FE9022B00407BED /* DyTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyTransitionViewController.swift; sourceTree = "<group>"; };
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
 		25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyAnimationViewController.h; sourceTree = "<group>"; };
 		25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAnimationViewController.m; sourceTree = "<group>"; };
@@ -151,6 +162,17 @@
 			path = VoiceOvers;
 			sourceTree = "<group>";
 		};
+		2505A2051FE8E9F100407BED /* ReverseVideo */ = {
+			isa = PBXGroup;
+			children = (
+				2505A2071FE8E9F100407BED /* AVUtilities.swift */,
+				2505A20B1FE8EEFF00407BED /* DyReverseVideo.h */,
+				2505A20C1FE8EEFF00407BED /* DyReverseVideo.m */,
+				2505A2111FE8FF8200407BED /* input.mov */,
+			);
+			path = ReverseVideo;
+			sourceTree = "<group>";
+		};
 		25C173CC1FDE8B5900A64622 /* EditorTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,13 +209,16 @@
 		962DF3C21FC058DD00B46309 /* Dolby */ = {
 			isa = PBXGroup;
 			children = (
+				2505A2051FE8E9F100407BED /* ReverseVideo */,
 				2505A1E01FE817D500407BED /* VideoResource */,
 				2505A1DD1FE817A000407BED /* LayerToVideo */,
 				25C173CC1FDE8B5900A64622 /* EditorTool */,
 				962DF3C31FC058DD00B46309 /* AppDelegate.swift */,
 				962DF3C51FC058DD00B46309 /* ViewController.swift */,
+				2505A2151FE9022B00407BED /* DyTransitionViewController.swift */,
 				25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */,
 				25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */,
+				2505A2131FE8FFD200407BED /* DyReverseViewController.swift */,
 				25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */,
 				962DF3C71FC058DD00B46309 /* Main.storyboard */,
 				962DF3CA1FC058DD00B46309 /* Assets.xcassets */,
@@ -273,6 +298,7 @@
 				2505A1FA1FE817D500407BED /* John F. Kennedy.m4a in Resources */,
 				2505A1F41FE817D500407BED /* star.png in Resources */,
 				2505A1F91FE817D500407BED /* 01 Star Gazing.m4a in Resources */,
+				2505A2121FE8FF8200407BED /* input.mov in Resources */,
 				2505A1F51FE817D500407BED /* 02_blackhole.mp4 in Resources */,
 				2505A1F31FE817D500407BED /* 04_quasar.mp4 in Resources */,
 				2505A1F11FE817D500407BED /* 01_nebula.mp4 in Resources */,
@@ -289,15 +315,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2505A2141FE8FFD200407BED /* DyReverseViewController.swift in Sources */,
 				2505A2041FE8191300407BED /* DyOverlayToVideo.m in Sources */,
 				2505A1D61FE8020800407BED /* DyAssetExportSession.swift in Sources */,
 				25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */,
 				25E24FBA1FE767CF003C4EFB /* DyReadAndWrite.m in Sources */,
+				2505A20A1FE8E9F100407BED /* AVUtilities.swift in Sources */,
 				962DF3C61FC058DD00B46309 /* ViewController.swift in Sources */,
 				25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */,
 				2505A2011FE8188300407BED /* DyAddBorderToVideo.m in Sources */,
 				962DF3C41FC058DD00B46309 /* AppDelegate.swift in Sources */,
 				25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */,
+				2505A20D1FE8EEFF00407BED /* DyReverseVideo.m in Sources */,
+				2505A2161FE9022B00407BED /* DyTransitionViewController.swift in Sources */,
 				2505A1DF1FE817A100407BED /* DyLayerToVideo.swift in Sources */,
 				2505A1DA1FE8040C00407BED /* DyFixOrientation.swift in Sources */,
 				2501044D1FDE9E1A0028A985 /* DyAnimation.m in Sources */,
