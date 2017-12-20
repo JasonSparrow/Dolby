@@ -8,20 +8,29 @@
 
 import UIKit
 
-class DyReverseViewController: UIViewController {
 
+class DyReverseViewController: UIViewController {
+    
     var play:AVPlayer!
+    var playItem:AVPlayerItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = Bundle.main.url(forResource: "input", withExtension: "mov")
+        let url = Bundle.main.url(forResource: "IMG_2262", withExtension: "MOV")
         let asset = AVAsset(url: url!)
         
+        let date = Date()
         print("开始 - \(Date())")
         let reverseAsset:AVAsset = DyReverseVideo.asset(byReversing: asset, outputURL: DyExportURL.exportURL() as URL!)
-        print("结束 - \(Date())")
+        print("结束 - \(Date().timeIntervalSince(date))")
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            DySaveToAlbum.saveToAlbum(outputURL: DyExportURL.exportURL() as URL)
+        }
 
-        let playItem = AVPlayerItem(asset: reverseAsset)
+
+        playItem = AVPlayerItem(asset: reverseAsset)
         playItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
         play = AVPlayer(playerItem: playItem)
         
@@ -36,6 +45,7 @@ class DyReverseViewController: UIViewController {
         switch play.status {
         case .readyToPlay:
             play.play()
+            print("play")
         case .failed:
             print("fail")
         default:
@@ -43,4 +53,8 @@ class DyReverseViewController: UIViewController {
         }
     }
     
+    deinit {
+        playItem.removeObserver(self, forKeyPath: "status", context: nil)
+    }
+   
 }

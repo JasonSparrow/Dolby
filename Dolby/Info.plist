@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Photo Library Usage Description </key>
+	<string>是否允许杜比访问相册?</string>
 </dict>
 </plist>

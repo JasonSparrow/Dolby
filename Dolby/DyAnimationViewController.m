@@ -98,6 +98,12 @@
     [self.view.layer addSublayer:syncLayer];
 
 }
+    
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self removeObserver:self forKeyPath:@"status" context:nil];
+}
 
 
 @end

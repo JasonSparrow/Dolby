@@ -31,6 +31,8 @@
 		2505A2121FE8FF8200407BED /* input.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2111FE8FF8200407BED /* input.mov */; };
 		2505A2141FE8FFD200407BED /* DyReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2131FE8FFD200407BED /* DyReverseViewController.swift */; };
 		2505A2161FE9022B00407BED /* DyTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2151FE9022B00407BED /* DyTransitionViewController.swift */; };
+		2505A2A51FEA1D3300407BED /* DySaveToAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2A41FEA1D3300407BED /* DySaveToAlbum.swift */; };
+		2505A2A91FEA3F2A00407BED /* IMG_2262.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2A81FEA3F2A00407BED /* IMG_2262.MOV */; };
 		25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */; };
 		25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */; };
 		25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB61FE7677F003C4EFB /* DyGenerateThumbnails.m */; };
@@ -71,6 +73,8 @@
 		2505A2111FE8FF8200407BED /* input.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = input.mov; sourceTree = "<group>"; };
 		2505A2131FE8FFD200407BED /* DyReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyReverseViewController.swift; sourceTree = "<group>"; };
 		2505A2151FE9022B00407BED /* DyTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyTransitionViewController.swift; sourceTree = "<group>"; };
+		2505A2A41FEA1D3300407BED /* DySaveToAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DySaveToAlbum.swift; sourceTree = "<group>"; };
+		2505A2A81FEA3F2A00407BED /* IMG_2262.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_2262.MOV; sourceTree = "<group>"; };
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
 		25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyAnimationViewController.h; sourceTree = "<group>"; };
 		25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAnimationViewController.m; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				2505A2071FE8E9F100407BED /* AVUtilities.swift */,
 				2505A20B1FE8EEFF00407BED /* DyReverseVideo.h */,
 				2505A20C1FE8EEFF00407BED /* DyReverseVideo.m */,
+				2505A2A81FEA3F2A00407BED /* IMG_2262.MOV */,
 				2505A2111FE8FF8200407BED /* input.mov */,
 			);
 			path = ReverseVideo;
@@ -186,6 +191,7 @@
 				2505A1D51FE8020800407BED /* DyAssetExportSession.swift */,
 				2505A1D71FE8025300407BED /* DyExportURL.swift */,
 				2505A1D91FE8040C00407BED /* DyFixOrientation.swift */,
+				2505A2A41FEA1D3300407BED /* DySaveToAlbum.swift */,
 			);
 			path = EditorTool;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				2505A1FB1FE817D500407BED /* Carl Sagan.m4a in Resources */,
 				962DF3CE1FC058DD00B46309 /* LaunchScreen.storyboard in Resources */,
 				2505A1FC1FE817D500407BED /* Ronald Reagan.m4a in Resources */,
+				2505A2A91FEA3F2A00407BED /* IMG_2262.MOV in Resources */,
 				2505A1F21FE817D500407BED /* 03_nebula.mp4 in Resources */,
 				962DF3CB1FC058DD00B46309 /* Assets.xcassets in Resources */,
 				962DF3C91FC058DD00B46309 /* Main.storyboard in Resources */,
@@ -317,6 +324,7 @@
 			files = (
 				2505A2141FE8FFD200407BED /* DyReverseViewController.swift in Sources */,
 				2505A2041FE8191300407BED /* DyOverlayToVideo.m in Sources */,
+				2505A2A51FEA1D3300407BED /* DySaveToAlbum.swift in Sources */,
 				2505A1D61FE8020800407BED /* DyAssetExportSession.swift in Sources */,
 				25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */,
 				25E24FBA1FE767CF003C4EFB /* DyReadAndWrite.m in Sources */,

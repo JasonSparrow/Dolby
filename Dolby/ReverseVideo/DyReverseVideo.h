@@ -11,5 +11,5 @@
 
 @interface DyReverseVideo : NSObject
 + (AVAsset *)assetByReversingAsset:(AVAsset *)asset outputURL:(NSURL *)outputURL;
-
++ (AVAsset *)assetByReversingAsset1:(AVAsset *)asset outputURL:(NSURL *)outputURL;
 @end

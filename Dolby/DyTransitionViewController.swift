@@ -39,5 +39,8 @@ class DyTransitionViewController: UIViewController {
             print("unknow")
         }
     }
-
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.removeObserver(self, forKeyPath: "status", context: nil)
+    }
 }

@@ -13,12 +13,10 @@ class DyExportURL: NSObject {
     class func exportURL() -> NSURL {
         // 4 -获取路径
         let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
-        dateFormatter.timeStyle = .short
-        let date = dateFormatter.string(from: Date())
-        let savePath = (documentDirectory as NSString).appendingPathComponent("mergeVideo-\(date).mov")
+        let dateString:String = "\(Date().timeIntervalSince1970)".replacingOccurrences(of: ".", with: "")
+        let savePath = (documentDirectory as NSString).appendingPathComponent("\(dateString).mov")
         let url = NSURL(fileURLWithPath: savePath)
+        print(url)
         return url
     }
 }
