@@ -39,7 +39,7 @@
         
     }
     
-    // 初始化AVAssetWriter
+    // 初始化AVAssetWriter, 写入的类型为AVFileTypeQuickTimeMovie, 视频
     AVAssetWriter *writer = [[AVAssetWriter alloc] initWithURL:outputURL
                                                       fileType:AVFileTypeQuickTimeMovie
                                                          error:&error];
@@ -52,6 +52,7 @@
                                           [NSNumber numberWithInt:videoTrack.naturalSize.height], AVVideoHeightKey,
                                           videoCompressionProps, AVVideoCompressionPropertiesKey,
                                           nil];
+    //输出的类型为AVMediaTypeVideo
     AVAssetWriterInput *writerInput = [[AVAssetWriterInput alloc] initWithMediaType:AVMediaTypeVideo
                                                                      outputSettings:writerOutputSettings
                                                                    sourceFormatHint:(__bridge CMFormatDescriptionRef)[videoTrack.formatDescriptions lastObject]];
@@ -84,6 +85,11 @@
             [NSThread sleepForTimeInterval:0.1];
         }
         
+        /*
+         把每一帧的图片样本数据合成视频
+         imageBufferRef: 需要被合成的图片资源
+         presentationTime: 该图片出现的时间点
+        */
         [pixelBufferAdaptor appendPixelBuffer:imageBufferRef withPresentationTime:presentationTime];
         //NSLog(@"倒转 = %ld", (long)i);
     }

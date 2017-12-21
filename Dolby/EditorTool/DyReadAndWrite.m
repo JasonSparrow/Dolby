@@ -16,7 +16,7 @@
 
 @implementation DyReadAndWrite
 
-- (void)readAndWrite {
+- (void)read {
     NSURL *assetURL = [[NSBundle mainBundle] URLForResource:@"IMG_3692" withExtension:@"m4v"];
     AVAsset *asset = [AVAsset assetWithURL:assetURL];
     /*
@@ -34,10 +34,14 @@
     //开始读取
     [self.assetReader startReading];
     
+   
+}
+    
+- (void)write:(AVAssetReaderTrackOutput *)trackOutput {
+    
     /*
      * 配置 AVAssetWriter
      */
-    
     NSURL *outputURL = [NSURL URLWithString:@""];
     self.assetWriter = [[AVAssetWriter alloc] initWithURL:outputURL fileType:AVFileTypeQuickTimeMovie error:nil];
     

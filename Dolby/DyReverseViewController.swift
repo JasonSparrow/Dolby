@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class DyReverseViewController: UIViewController {
     
     var play:AVPlayer!

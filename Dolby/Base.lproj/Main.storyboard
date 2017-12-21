@@ -45,6 +45,14 @@
                                     <action selector="transition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDW-ay-J2P"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvu-pV-cTn">
+                                <rect key="frame" x="23" y="440" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="图片到视频"/>
+                                <connections>
+                                    <action selector="picToVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oe-u4-4cL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>

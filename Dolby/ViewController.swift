@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
 
+    @IBAction func picToVideo(_ sender: Any) {
+        self.navigationController?.pushViewController(DyStopViewController(), animated: true)
+    }
+    
     @IBAction func playBack(_ sender: Any) {
         self.navigationController?.pushViewController(DyReverseViewController(), animated: true)
     }

@@ -33,6 +33,13 @@
 		2505A2161FE9022B00407BED /* DyTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2151FE9022B00407BED /* DyTransitionViewController.swift */; };
 		2505A2A51FEA1D3300407BED /* DySaveToAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2A41FEA1D3300407BED /* DySaveToAlbum.swift */; };
 		2505A2A91FEA3F2A00407BED /* IMG_2262.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2A81FEA3F2A00407BED /* IMG_2262.MOV */; };
+		2505A2AC1FEA55AD00407BED /* DyPictureToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2AB1FEA55AD00407BED /* DyPictureToVideo.swift */; };
+		2505A2BC1FEA595E00407BED /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2B91FEA595E00407BED /* 3.jpg */; };
+		2505A2BD1FEA595E00407BED /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2BA1FEA595E00407BED /* 2.jpg */; };
+		2505A2BE1FEA595E00407BED /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2BB1FEA595E00407BED /* 1.jpg */; };
+		2505A2C41FEA92BB00407BED /* DyStopMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2C31FEA92BB00407BED /* DyStopMotion.m */; };
+		2505A2C71FEA95CD00407BED /* DyStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2C61FEA95CD00407BED /* DyStopViewController.m */; };
+		2505A2CA1FEAA08C00407BED /* TransitionCompositionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2C91FEAA08C00407BED /* TransitionCompositionBuilder.swift */; };
 		25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */; };
 		25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */; };
 		25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB61FE7677F003C4EFB /* DyGenerateThumbnails.m */; };
@@ -75,6 +82,15 @@
 		2505A2151FE9022B00407BED /* DyTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyTransitionViewController.swift; sourceTree = "<group>"; };
 		2505A2A41FEA1D3300407BED /* DySaveToAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DySaveToAlbum.swift; sourceTree = "<group>"; };
 		2505A2A81FEA3F2A00407BED /* IMG_2262.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_2262.MOV; sourceTree = "<group>"; };
+		2505A2AB1FEA55AD00407BED /* DyPictureToVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyPictureToVideo.swift; sourceTree = "<group>"; };
+		2505A2B91FEA595E00407BED /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		2505A2BA1FEA595E00407BED /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		2505A2BB1FEA595E00407BED /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		2505A2C21FEA92BB00407BED /* DyStopMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyStopMotion.h; sourceTree = "<group>"; };
+		2505A2C31FEA92BB00407BED /* DyStopMotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyStopMotion.m; sourceTree = "<group>"; };
+		2505A2C51FEA95CD00407BED /* DyStopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyStopViewController.h; sourceTree = "<group>"; };
+		2505A2C61FEA95CD00407BED /* DyStopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyStopViewController.m; sourceTree = "<group>"; };
+		2505A2C91FEAA08C00407BED /* TransitionCompositionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionCompositionBuilder.swift; sourceTree = "<group>"; };
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
 		25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyAnimationViewController.h; sourceTree = "<group>"; };
 		25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAnimationViewController.m; sourceTree = "<group>"; };
@@ -178,6 +194,27 @@
 			path = ReverseVideo;
 			sourceTree = "<group>";
 		};
+		2505A2AA1FEA405C00407BED /* PicsConvertVideo */ = {
+			isa = PBXGroup;
+			children = (
+				2505A2BB1FEA595E00407BED /* 1.jpg */,
+				2505A2BA1FEA595E00407BED /* 2.jpg */,
+				2505A2B91FEA595E00407BED /* 3.jpg */,
+				2505A2AB1FEA55AD00407BED /* DyPictureToVideo.swift */,
+				2505A2C21FEA92BB00407BED /* DyStopMotion.h */,
+				2505A2C31FEA92BB00407BED /* DyStopMotion.m */,
+			);
+			path = PicsConvertVideo;
+			sourceTree = "<group>";
+		};
+		2505A2C81FEAA06D00407BED /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				2505A2C91FEAA08C00407BED /* TransitionCompositionBuilder.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		25C173CC1FDE8B5900A64622 /* EditorTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +252,8 @@
 		962DF3C21FC058DD00B46309 /* Dolby */ = {
 			isa = PBXGroup;
 			children = (
+				2505A2C81FEAA06D00407BED /* Transition */,
+				2505A2AA1FEA405C00407BED /* PicsConvertVideo */,
 				2505A2051FE8E9F100407BED /* ReverseVideo */,
 				2505A1E01FE817D500407BED /* VideoResource */,
 				2505A1DD1FE817A000407BED /* LayerToVideo */,
@@ -225,6 +264,8 @@
 				25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */,
 				25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */,
 				2505A2131FE8FFD200407BED /* DyReverseViewController.swift */,
+				2505A2C51FEA95CD00407BED /* DyStopViewController.h */,
+				2505A2C61FEA95CD00407BED /* DyStopViewController.m */,
 				25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */,
 				962DF3C71FC058DD00B46309 /* Main.storyboard */,
 				962DF3CA1FC058DD00B46309 /* Assets.xcassets */,
@@ -304,6 +345,9 @@
 				962DF3C91FC058DD00B46309 /* Main.storyboard in Resources */,
 				2505A1FA1FE817D500407BED /* John F. Kennedy.m4a in Resources */,
 				2505A1F41FE817D500407BED /* star.png in Resources */,
+				2505A2BE1FEA595E00407BED /* 1.jpg in Resources */,
+				2505A2BD1FEA595E00407BED /* 2.jpg in Resources */,
+				2505A2BC1FEA595E00407BED /* 3.jpg in Resources */,
 				2505A1F91FE817D500407BED /* 01 Star Gazing.m4a in Resources */,
 				2505A2121FE8FF8200407BED /* input.mov in Resources */,
 				2505A1F51FE817D500407BED /* 02_blackhole.mp4 in Resources */,
@@ -325,13 +369,17 @@
 				2505A2141FE8FFD200407BED /* DyReverseViewController.swift in Sources */,
 				2505A2041FE8191300407BED /* DyOverlayToVideo.m in Sources */,
 				2505A2A51FEA1D3300407BED /* DySaveToAlbum.swift in Sources */,
+				2505A2CA1FEAA08C00407BED /* TransitionCompositionBuilder.swift in Sources */,
 				2505A1D61FE8020800407BED /* DyAssetExportSession.swift in Sources */,
+				2505A2C41FEA92BB00407BED /* DyStopMotion.m in Sources */,
 				25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */,
 				25E24FBA1FE767CF003C4EFB /* DyReadAndWrite.m in Sources */,
 				2505A20A1FE8E9F100407BED /* AVUtilities.swift in Sources */,
+				2505A2C71FEA95CD00407BED /* DyStopViewController.m in Sources */,
 				962DF3C61FC058DD00B46309 /* ViewController.swift in Sources */,
 				25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */,
 				2505A2011FE8188300407BED /* DyAddBorderToVideo.m in Sources */,
+				2505A2AC1FEA55AD00407BED /* DyPictureToVideo.swift in Sources */,
 				962DF3C41FC058DD00B46309 /* AppDelegate.swift in Sources */,
 				25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */,
 				2505A20D1FE8EEFF00407BED /* DyReverseVideo.m in Sources */,
