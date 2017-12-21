@@ -183,22 +183,17 @@ struct TransitionCompositionBuilder {
 
             let videoWidth: CGFloat
             let videoHeight: CGFloat
-
             let transform: CGAffineTransform
 
             let videoAngleInDegree  = atan2(videoTracks[0].preferredTransform.b, videoTracks[0].preferredTransform.a) * 180 / CGFloat(Double.pi)
-
             if videoAngleInDegree == 90 {
-
                 videoWidth = composition.naturalSize.height
                 videoHeight = composition.naturalSize.width
                 transform = videoTracks[0].preferredTransform.concatenating(CGAffineTransform(translationX: videoWidth, y: 0.0))
-
             } else {
-
-                transform = videoTracks[0].preferredTransform
                 videoWidth = composition.naturalSize.width
                 videoHeight = composition.naturalSize.height
+                transform = videoTracks[0].preferredTransform
             }
 
             // Now create the instructions from the various time ranges.
@@ -211,15 +206,14 @@ struct TransitionCompositionBuilder {
                 passThroughInstruction.timeRange = passThroughTimeRanges[i].timeRangeValue
 
                 let passThroughLayerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: currentVideoTrack)
-
+                //Jason
                 passThroughLayerInstruction.setTransform(transform, at: kCMTimeZero)
 
                 // You can use it to debug.
-//                passThroughLayerInstruction.setTransformRampFromStartTransform(CGAffineTransformIdentity, toEndTransform: transform, timeRange: passThroughTimeRanges[i].CMTimeRangeValue)
+//                passThroughLayerInstruction.setTransformRamp(fromStart: CGAffineTransform.identity, toEnd: transform, timeRange: passThroughTimeRanges[i].timeRangeValue)
 
 
                 passThroughInstruction.layerInstructions = [passThroughLayerInstruction]
-
                 instructions.append(passThroughInstruction)
 
                 if i < transitionTimeRanges.count {
@@ -234,11 +228,35 @@ struct TransitionCompositionBuilder {
                     let fromLayerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: fromTrack)
                     fromLayerInstruction.setTransform(transform, at: kCMTimeZero)
 
-                    // Make the opacity ramp and apply it to the from layer instruction.
-                    fromLayerInstruction.setOpacityRamp(fromStartOpacity: 1.0, toEndOpacity:0.0, timeRange: transitionInstruction.timeRange)
-
+                    
                     let toLayerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: toTrack)
                     toLayerInstruction.setTransform(transform, at: kCMTimeZero)
+                    
+                    // Make the opacity ramp and apply it to the from layer instruction.
+                    //渐隐渐显
+//                    fromLayerInstruction.setOpacityRamp(fromStartOpacity: 1.0, toEndOpacity:0.0, timeRange: transitionInstruction.timeRange)
+                    
+//
+//                    let videoWidth = videoComposition.renderSize.width
+//                    let videoHeight = videoComposition.renderSize.height
+//
+//                    let startRect:CGRect = CGRect(x: 0, y: 0, width: videoWidth, height: videoHeight)
+//                    let endRect = CGRect(x: 0, y: videoHeight, width: videoWidth, height: 0)
+//
+//                    fromLayerInstruction.setCropRectangleRamp(fromStartCropRectangle: startRect, toEndCropRectangle: endRect, timeRange: transitionInstruction.timeRange)
+                    
+                    
+                    let identityTransform:CGAffineTransform = CGAffineTransform.identity
+                    let videoWidth = videoComposition.renderSize.width;
+                    
+                    let fromDestTransform:CGAffineTransform = CGAffineTransform(translationX: -videoWidth, y: 0.0);
+                    
+                    let toStartTransform:CGAffineTransform = CGAffineTransform(translationX: videoWidth, y: 0.0);
+                    
+                    fromLayerInstruction.setTransformRamp(fromStart: identityTransform, toEnd: fromDestTransform, timeRange: transitionInstruction.timeRange)
+                    
+                    toLayerInstruction.setTransformRamp(fromStart: toStartTransform, toEnd: identityTransform, timeRange: transitionInstruction.timeRange)
+                    
 
                     transitionInstruction.layerInstructions = [fromLayerInstruction, toLayerInstruction]
 

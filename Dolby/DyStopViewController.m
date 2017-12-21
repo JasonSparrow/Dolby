@@ -36,6 +36,8 @@
     [button1 addTarget:self action:@selector(playAction)forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
     
 -(void)testCompressionSession {

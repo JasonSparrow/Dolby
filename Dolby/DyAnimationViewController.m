@@ -12,6 +12,7 @@
 
 @interface DyAnimationViewController ()
 @property (nonatomic, strong)AVPlayer *play;
+@property (nonatomic, strong)AVPlayerItem *playItem;
 @end
 
 @implementation DyAnimationViewController
@@ -83,8 +84,9 @@
     
     
     DyAnimation *dy = [[DyAnimation alloc] init];
-    [dy.item addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    _play = [AVPlayer playerWithPlayerItem:dy.item];
+    self.playItem = dy.makePlayable;
+    [_playItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    _play = [AVPlayer playerWithPlayerItem:_playItem];
     
     
     AVPlayerLayer * playLayer = [AVPlayerLayer playerLayerWithPlayer:_play];
@@ -93,7 +95,7 @@
     [self.view.layer addSublayer:playLayer];
     
     //AVSynchronizedLayer用于和AVPlayItem对象同步时间, 这个图层本身不展示任何内容, 只是用来与图层子树协同时间.
-    AVSynchronizedLayer *syncLayer = [AVSynchronizedLayer synchronizedLayerWithPlayerItem:dy.item];
+    AVSynchronizedLayer *syncLayer = [AVSynchronizedLayer synchronizedLayerWithPlayerItem:_playItem];
     [syncLayer addSublayer:parentLayer];
     [self.view.layer addSublayer:syncLayer];
 
@@ -102,7 +104,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [self removeObserver:self forKeyPath:@"status" context:nil];
+    [_playItem removeObserver:self forKeyPath:@"status" context:nil];
 }
 
 

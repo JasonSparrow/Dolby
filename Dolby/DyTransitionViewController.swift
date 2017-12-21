@@ -12,14 +12,32 @@ import AVFoundation
 class DyTransitionViewController: UIViewController {
 
     var play:AVPlayer!
+    var playItem:AVPlayerItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let url1 = Bundle.main.url(forResource: "1513822721", withExtension: "mp4")
+        let asset1 = AVAsset(url: url1!)
+        let url2 = Bundle.main.url(forResource: "1513823108", withExtension: "mp4")
+        let asset2 = AVAsset(url: url2!)
+        let url3 = Bundle.main.url(forResource: "1513822721", withExtension: "mp4")
+        let asset3 = AVAsset(url: url3!)
+        let url4 = Bundle.main.url(forResource: "1513823108", withExtension: "mp4")
+        let asset4 = AVAsset(url: url4!)
         
+        let videoAssets = [asset1, asset2, asset3, asset4]
+        
+//        var transition:TransitionCompositionBuilder = TransitionCompositionBuilder.init(assets: videoAssets, transitionDuration: 0.5)!
+//        let transitionComposition = transition.buildComposition()
+//         playItem = transitionComposition.makePlayable()
         
         let dy:DyAnimation = DyAnimation()
-        dy.item?.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
-        play = AVPlayer(playerItem: dy.item)
+        dy.videoAssets = videoAssets
+        dy.calculatePassAndTransition()
+        playItem = dy.makePlayable()
+        playItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
+        play = AVPlayer(playerItem: playItem)
         
         
         let playLayer = AVPlayerLayer(player: play)
@@ -39,8 +57,11 @@ class DyTransitionViewController: UIViewController {
             print("unknow")
         }
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.removeObserver(self, forKeyPath: "status", context: nil)
+    
+    
+    deinit {
+        playItem.removeObserver(self, forKeyPath: "status", context: nil)
     }
+    
+    
 }
