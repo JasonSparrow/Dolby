@@ -8,7 +8,7 @@
 
 #import "DyAnimationViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import "DyAnimation.h"
+#import "DyVideoTransition.h"
 
 @interface DyAnimationViewController ()
 @property (nonatomic, strong)AVPlayer *play;
@@ -83,7 +83,7 @@
     [imageLayer addAnimation:rotationAnimation forKey:@"rotateAnimation"];
     
     
-    DyAnimation *dy = [[DyAnimation alloc] init];
+    DyVideoTransition *dy = [[DyVideoTransition alloc] init];
     self.playItem = dy.makePlayable;
     [_playItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     _play = [AVPlayer playerWithPlayerItem:_playItem];

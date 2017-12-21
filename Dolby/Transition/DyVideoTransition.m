@@ -1,30 +1,31 @@
 //
-//  DyAnimation.m
+//  DyVideoTransition.m
 //  Dolby
 //
-//  Created by hr on 2017/12/11.
+//  Created by hr on 2017/12/21.
 //  Copyright © 2017年 王腾飞. All rights reserved.
 //
 
-#import "DyAnimation.h"
+#import "DyVideoTransition.h"
 
-@interface DyAnimation()
+@interface DyVideoTransition()
 {
     CMTime transitionDuration;
 }
 @property(nonatomic, strong)AVMutableComposition *composition;
 @property(nonatomic, strong)NSArray <AVMutableCompositionTrack *>*compositionVideoTracks;
 @property(nonatomic, strong)AVMutableVideoComposition *videoComposition;
+@property(nonatomic, strong)NSArray <AVAsset *>*videoAssets;
 
 @end
 
-@implementation DyAnimation
+@implementation DyVideoTransition
 
-- (instancetype)init
+- (instancetype)initWithAssets:(NSArray <AVAsset *>*)videoAssets
 {
     self = [super init];
     if (self) {
-
+        _videoAssets = videoAssets;
     }
     return self;
 }
@@ -32,7 +33,7 @@
 - (NSArray <AVMutableCompositionTrack *>*)getVideoTracks {
     //设置两个视频轨道
     self.composition = [AVMutableComposition composition];
-
+    
     AVMutableCompositionTrack *trackA = [_composition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
     
     AVMutableCompositionTrack *trackB = [_composition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
@@ -71,7 +72,7 @@
 - (void)calculatePassAndTransition {
     NSArray *videoAssets = [self setA_BTrack];
     CMTime cursorTime = kCMTimeZero;
-
+    
     //示例中组合的视频集进行了遍历, 对每个视频都创建了一个初始时间范围, 之后根据其原始位置, 对时间范围的起点和持续时间进行修改, 计算出cursorTime后, 基于cursorTime和transitionDuration创建相关的过渡时间范围
     NSMutableArray *passThroughTimeRanges = [NSMutableArray array];
     NSMutableArray *transitionTimeRanges = [NSMutableArray array];
@@ -154,13 +155,13 @@
         //2. 创建一个新的AVMutableVideoCompositionInstruction实例, 设置当前通过的CMTimeRange为它的timeRange值
         AVMutableVideoCompositionInstruction *passThroughInstruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
         passThroughInstruction.timeRange = [passThroughTimeRanges[i] CMTimeRangeValue];
-
+        
         //3. 为活动组合创建一个新的AVMutableVideoCompositionLayerInstruction, 将它添加到数组中, 并设置它作为组合指令的layerInstructions属性, 组合的通过时间范围区域只需要一个与要呈现视频的轨道相关的单独层指令
         AVMutableVideoCompositionLayerInstruction *passThroughLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:currentVideoTrack];
         
         passThroughInstruction.layerInstructions = @[passThroughLayerInstruction];
         [instructions addObject:passThroughInstruction];
-
+        
         if (i < transitionTimeRanges.count) {
             
             //4. 要创建过度时间范围指令, 需要得到前一个轨道的引用和后一个轨道的引用, 按这种方式查找轨道可以确保轨道的引用顺序始终正确
@@ -178,67 +179,69 @@
             
             AVMutableVideoCompositionLayerInstruction *toLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:backgroundTrack];
             //----------------------
-//            [fromLayerInstruction setOpacityRampFromStartOpacity:1.0
-//                                                    toEndOpacity:0.0
-//                                                       timeRange:timeRange];
+            //            [fromLayerInstruction setOpacityRampFromStartOpacity:1.0
+            //                                                    toEndOpacity:0.0
+            //                                                       timeRange:timeRange];
             //----------------------
             
             
             //--------------------------
             // Define starting and ending transforms                        // 1
-//            CGAffineTransform identityTransform = CGAffineTransformIdentity;
-//
-//            CGFloat videoWidth = videoComposition.renderSize.width;
-//
-//            CGAffineTransform fromDestTransform =                           // 2
-//            CGAffineTransformMakeTranslation(-videoWidth, 0.0);
-//
-//            CGAffineTransform toStartTransform =
-//            CGAffineTransformMakeTranslation(videoWidth, 0.0);
-//
-//            [fromLayerInstruction setTransformRampFromStartTransform:identityTransform // 3
-//                                           toEndTransform:fromDestTransform
-//                                                timeRange:timeRange];
-//
-//            [toLayerInstruction setTransformRampFromStartTransform:toStartTransform    // 4
-//                                         toEndTransform:identityTransform
-//                                              timeRange:timeRange];
+            CGAffineTransform identityTransform = CGAffineTransformIdentity;
+
+            CGFloat videoWidth = videoComposition.renderSize.width;
+
+            CGAffineTransform fromDestTransform =                           // 2
+            CGAffineTransformMakeTranslation(-videoWidth, 0.0);
+
+            CGAffineTransform toStartTransform =
+            CGAffineTransformMakeTranslation(videoWidth, 0.0);
+
+            [fromLayerInstruction setTransformRampFromStartTransform:identityTransform // 3
+                                           toEndTransform:fromDestTransform
+                                                timeRange:timeRange];
+
+            [toLayerInstruction setTransformRampFromStartTransform:toStartTransform    // 4
+                                         toEndTransform:identityTransform
+                                              timeRange:timeRange];
             //--------------------------
             
             //--------------------------------
-            CGFloat videoWidth = videoComposition.renderSize.width;
-            CGFloat videoHeight = videoComposition.renderSize.height;
-            
-            CGRect startRect = CGRectMake(0.0f, 0.0f, videoWidth, videoHeight);
-            CGRect endRect = CGRectMake(0.0f, videoHeight, videoWidth, 0.0f);
-            
-            [fromLayerInstruction setCropRectangleRampFromStartCropRectangle:startRect
-                                               toEndCropRectangle:endRect
-                                                        timeRange:timeRange];
+//            CGFloat videoWidth = videoComposition.renderSize.width;
+//            CGFloat videoHeight = videoComposition.renderSize.height;
+//
+//            CGRect startRect = CGRectMake(0.0f, 0.0f, videoWidth, videoHeight);
+//            CGRect endRect = CGRectMake(0.0f, videoHeight, videoWidth, 0.0f);
+//
+//            [fromLayerInstruction setCropRectangleRampFromStartCropRectangle:startRect
+//                                                          toEndCropRectangle:endRect
+//                                                                   timeRange:timeRange];
             //--------------------------------
-
+            
             //7. 将两个层指令都添加到数组中, 并设置他们作为当前组合指令的layerInstructions属性值, 对这一数组中的元素排序非常重要, 因为它定义了组合输出中视频图层的Z轴顺序
             transitionInstruction.layerInstructions = @[fromLayerInstruction, toLayerInstruction];
             
             [instructions addObject:transitionInstruction];
-          
+            
         }
     }
     
-//    AVMutableVideoComposition *videoComposition = [AVMutableVideoComposition videoComposition];
+    //AVMutableVideoComposition *videoComposition = [AVMutableVideoComposition videoComposition];
     videoComposition.instructions = instructions;
     videoComposition.renderSize = CGSizeMake(videoWidth, videoHeight);
     videoComposition.frameDuration = CMTimeMake(1, 30);
     videoComposition.renderScale = 1.0f;
-
+    
     _videoComposition = videoComposition;
-   
+    
     
 }
 
 - (AVPlayerItem *)makePlayable {
+    [self calculatePassAndTransition];
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:[_composition copy]];
     playerItem.videoComposition = _videoComposition;
-     return playerItem;
+    return playerItem;
 }
+
 @end

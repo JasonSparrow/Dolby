@@ -37,7 +37,7 @@
 		2505A2CA1FEAA08C00407BED /* TransitionCompositionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2C91FEAA08C00407BED /* TransitionCompositionBuilder.swift */; };
 		2505A2D21FEB519A00407BED /* 1513822721.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2D11FEB519A00407BED /* 1513822721.mp4 */; };
 		25092B731FEB5315009A4274 /* 1513823108.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25092B721FEB5315009A4274 /* 1513823108.mp4 */; };
-		25DA65701FEB882F002BD064 /* DyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DA656F1FEB882F002BD064 /* DyAnimation.m */; };
+		25864E6F1FEBB7CB00DFBEDC /* DyVideoTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 25864E6E1FEBB7CB00DFBEDC /* DyVideoTransition.m */; };
 		25DA65741FEBA15A002BD064 /* APLCompositionDebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DA65731FEBA159002BD064 /* APLCompositionDebugView.m */; };
 		25DA65781FEBA4FC002BD064 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65751FEBA4FB002BD064 /* 1.jpg */; };
 		25DA65791FEBA4FC002BD064 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65761FEBA4FC002BD064 /* 2.jpg */; };
@@ -89,9 +89,9 @@
 		2505A2C91FEAA08C00407BED /* TransitionCompositionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionCompositionBuilder.swift; sourceTree = "<group>"; };
 		2505A2D11FEB519A00407BED /* 1513822721.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1513822721.mp4; sourceTree = "<group>"; };
 		25092B721FEB5315009A4274 /* 1513823108.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1513823108.mp4; sourceTree = "<group>"; };
+		25864E6D1FEBB7CB00DFBEDC /* DyVideoTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyVideoTransition.h; sourceTree = "<group>"; };
+		25864E6E1FEBB7CB00DFBEDC /* DyVideoTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyVideoTransition.m; sourceTree = "<group>"; };
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
-		25DA656E1FEB882F002BD064 /* DyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DyAnimation.h; sourceTree = "<group>"; };
-		25DA656F1FEB882F002BD064 /* DyAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DyAnimation.m; sourceTree = "<group>"; };
 		25DA65721FEBA159002BD064 /* APLCompositionDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCompositionDebugView.h; sourceTree = "<group>"; };
 		25DA65731FEBA159002BD064 /* APLCompositionDebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCompositionDebugView.m; sourceTree = "<group>"; };
 		25DA65751FEBA4FB002BD064 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
@@ -216,9 +216,9 @@
 		2505A2C81FEAA06D00407BED /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				25DA656E1FEB882F002BD064 /* DyAnimation.h */,
-				25DA656F1FEB882F002BD064 /* DyAnimation.m */,
 				2505A2C91FEAA08C00407BED /* TransitionCompositionBuilder.swift */,
+				25864E6D1FEBB7CB00DFBEDC /* DyVideoTransition.h */,
+				25864E6E1FEBB7CB00DFBEDC /* DyVideoTransition.m */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -388,6 +388,7 @@
 				2505A2A51FEA1D3300407BED /* DySaveToAlbum.swift in Sources */,
 				2505A2CA1FEAA08C00407BED /* TransitionCompositionBuilder.swift in Sources */,
 				2505A1D61FE8020800407BED /* DyAssetExportSession.swift in Sources */,
+				25864E6F1FEBB7CB00DFBEDC /* DyVideoTransition.m in Sources */,
 				2505A2C41FEA92BB00407BED /* DyStopMotion.m in Sources */,
 				25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */,
 				25E24FBA1FE767CF003C4EFB /* DyReadAndWrite.m in Sources */,
@@ -405,7 +406,6 @@
 				2505A1DF1FE817A100407BED /* DyLayerToVideo.swift in Sources */,
 				2505A1DA1FE8040C00407BED /* DyFixOrientation.swift in Sources */,
 				2505A1D81FE8025300407BED /* DyExportURL.swift in Sources */,
-				25DA65701FEB882F002BD064 /* DyAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

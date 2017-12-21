@@ -9,7 +9,7 @@
 #import "DyReverseVideo.h"
 
 @implementation DyReverseVideo
-+ (AVAsset *)assetByReversingAsset:(AVAsset *)asset outputURL:(NSURL *)outputURL {
++ (void)assetByReversingAsset:(AVAsset *)asset outputURL:(NSURL *)outputURL completeBlock:(void(^)(AVAsset *))block {
     NSError *error;
     
     // 初始化AVAssetReader
@@ -25,15 +25,14 @@
     // 读取样本数据
     NSMutableArray *sampleBuffer = [[NSMutableArray alloc] init];
     
-    
-    //int count = 0;
+//    int count = 0;
     while(1) {
         CMSampleBufferRef sample = [readerOutput copyNextSampleBuffer];
         
         if (sample == NULL) {
             break;
         }
-        //NSLog(@"取样本 = %d", count++);
+//        NSLog(@"取样本 = %d", count++);
         [sampleBuffer addObject:(__bridge id)sample];
         CFRelease(sample);
         
@@ -81,24 +80,34 @@
         // 从数组的尾部获取 image/pixel buffer
         CVPixelBufferRef imageBufferRef = CMSampleBufferGetImageBuffer((__bridge CMSampleBufferRef)sampleBuffer[sampleBuffer.count - i - 1]);
         
+        //当数据还不能使用时, 休眠一下, 再次访问数据是否可用, 直到可用
         while (!writerInput.isReadyForMoreMediaData) {
             [NSThread sleepForTimeInterval:0.1];
+//            NSDate *maxDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
+//            [[NSRunLoop currentRunLoop] runUntilDate:maxDate];
         }
-        
+//        NSLog(@"%d", writerInput.isReadyForMoreMediaData);
         /*
          把每一帧的图片样本数据合成视频
          imageBufferRef: 需要被合成的图片资源
          presentationTime: 该图片出现的时间点
-        */
+         */
         [pixelBufferAdaptor appendPixelBuffer:imageBufferRef withPresentationTime:presentationTime];
-        //NSLog(@"倒转 = %ld", (long)i);
+//        NSLog(@"倒转 = %ld", (long)i);
+       
     }
     
     [writer finishWritingWithCompletionHandler:^{
-        
+        AVAssetWriterStatus status = writer.status;
+        if (status == AVAssetWriterStatusCompleted) {
+            //处理成功
+            block([AVAsset assetWithURL:outputURL]);
+        }else {
+            //处理失败
+            block(nil);
+        }
     }];
     
-    return [AVAsset assetWithURL:outputURL];
 }
     
     

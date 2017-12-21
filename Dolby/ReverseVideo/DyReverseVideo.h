@@ -10,6 +10,6 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface DyReverseVideo : NSObject
-+ (AVAsset *)assetByReversingAsset:(AVAsset *)asset outputURL:(NSURL *)outputURL;
-+ (AVAsset *)assetByReversingAsset1:(AVAsset *)asset outputURL:(NSURL *)outputURL;
++ (void)assetByReversingAsset:(AVAsset *)asset outputURL:(NSURL *)outputURL completeBlock:(void(^)(AVAsset *))block;
+//+ (AVAsset *)assetByReversingAsset1:(AVAsset *)asset outputURL:(NSURL *)outputURL;
 @end

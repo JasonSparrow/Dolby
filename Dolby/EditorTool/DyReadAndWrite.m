@@ -59,16 +59,16 @@
                                        ];
     [self.assetWriter addInput:writerInput];
     [self.assetWriter startWriting];
+    //创建一个新的写入回话, 传递kCMTimeZero参数作为资源样本开始的时间
+    [self.assetWriter startSessionAtSourceTime:kCMTimeZero];
     
     
     // serial queue
     dispatch_queue_t dispatchQueue = dispatch_queue_create("com.tap.write", NULL);
-    //创建一个新的写入回话, 传递kCMTimeZero参数作为资源样本开始的时间
-    [self.assetWriter startSessionAtSourceTime:kCMTimeZero];
     //请求读取
     [writerInput requestMediaDataWhenReadyOnQueue:dispatchQueue usingBlock:^{
         BOOL complete = NO;
-        while ([writerInput isReadyForMoreMediaData] && complete) {
+        while ([writerInput isReadyForMoreMediaData] && !complete) {
             CMSampleBufferRef sampleBuffer = [trackOutput copyNextSampleBuffer];
             if (sampleBuffer) {
                 BOOL result = [writerInput appendSampleBuffer:sampleBuffer];

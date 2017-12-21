@@ -3,7 +3,7 @@
 //
 
 
-#import "DyAnimation.h"
+#import "DyVideoTransition.h"
 #import "DyAnimationViewController.h"
 #import "DyReverseVideo.h"
 #import "DyStopMotion.h"

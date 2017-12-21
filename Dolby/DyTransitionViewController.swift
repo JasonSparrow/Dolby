@@ -32,9 +32,7 @@ class DyTransitionViewController: UIViewController {
 //        let transitionComposition = transition.buildComposition()
 //         playItem = transitionComposition.makePlayable()
         
-        let dy:DyAnimation = DyAnimation()
-        dy.videoAssets = videoAssets
-        dy.calculatePassAndTransition()
+        let dy:DyVideoTransition = DyVideoTransition(assets: videoAssets)
         playItem = dy.makePlayable()
         playItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
         play = AVPlayer(playerItem: playItem)
