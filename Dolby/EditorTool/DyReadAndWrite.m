@@ -65,7 +65,7 @@
     
     // serial queue
     dispatch_queue_t dispatchQueue = dispatch_queue_create("com.tap.write", NULL);
-    //请求读取
+    //请求读取, 该方法会重复调用, isReadyForMoreMediaData会返回数据是否可用, 如果可用则把数据追加, copyNextSampleBuffer会返回是否有数据可以继续追加, 如果返回NO, 则数据追加完毕, 接下来调用markAsFinished来标记数据读取完成, 结束block块的循环操作.
     [writerInput requestMediaDataWhenReadyOnQueue:dispatchQueue usingBlock:^{
         BOOL complete = NO;
         while ([writerInput isReadyForMoreMediaData] && !complete) {

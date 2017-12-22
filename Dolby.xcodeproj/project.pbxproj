@@ -11,12 +11,7 @@
 		2505A1D81FE8025300407BED /* DyExportURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A1D71FE8025300407BED /* DyExportURL.swift */; };
 		2505A1DA1FE8040C00407BED /* DyFixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A1D91FE8040C00407BED /* DyFixOrientation.swift */; };
 		2505A1DF1FE817A100407BED /* DyLayerToVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A1DE1FE817A000407BED /* DyLayerToVideo.swift */; };
-		2505A1F11FE817D500407BED /* 01_nebula.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1E21FE817D500407BED /* 01_nebula.mp4 */; };
-		2505A1F21FE817D500407BED /* 03_nebula.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1E31FE817D500407BED /* 03_nebula.mp4 */; };
-		2505A1F31FE817D500407BED /* 04_quasar.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1E41FE817D500407BED /* 04_quasar.mp4 */; };
 		2505A1F41FE817D500407BED /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1E51FE817D500407BED /* star.png */; };
-		2505A1F51FE817D500407BED /* 02_blackhole.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1E61FE817D500407BED /* 02_blackhole.mp4 */; };
-		2505A1F61FE817D500407BED /* 05_blackhole.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1E71FE817D500407BED /* 05_blackhole.mp4 */; };
 		2505A1F81FE817D500407BED /* 02 Keep Going.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1EB1FE817D500407BED /* 02 Keep Going.m4a */; };
 		2505A1F91FE817D500407BED /* 01 Star Gazing.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1EC1FE817D500407BED /* 01 Star Gazing.m4a */; };
 		2505A1FA1FE817D500407BED /* John F. Kennedy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1EE1FE817D500407BED /* John F. Kennedy.m4a */; };
@@ -24,7 +19,6 @@
 		2505A1FC1FE817D500407BED /* Ronald Reagan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2505A1F01FE817D500407BED /* Ronald Reagan.m4a */; };
 		2505A2011FE8188300407BED /* DyAddBorderToVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2001FE8188300407BED /* DyAddBorderToVideo.m */; };
 		2505A2041FE8191300407BED /* DyOverlayToVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2031FE8191300407BED /* DyOverlayToVideo.m */; };
-		2505A20A1FE8E9F100407BED /* AVUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2071FE8E9F100407BED /* AVUtilities.swift */; };
 		2505A20D1FE8EEFF00407BED /* DyReverseVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A20C1FE8EEFF00407BED /* DyReverseVideo.m */; };
 		2505A2121FE8FF8200407BED /* input.mov in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2111FE8FF8200407BED /* input.mov */; };
 		2505A2141FE8FFD200407BED /* DyReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2131FE8FFD200407BED /* DyReverseViewController.swift */; };
@@ -35,9 +29,10 @@
 		2505A2C41FEA92BB00407BED /* DyStopMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2C31FEA92BB00407BED /* DyStopMotion.m */; };
 		2505A2C71FEA95CD00407BED /* DyStopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2C61FEA95CD00407BED /* DyStopViewController.m */; };
 		2505A2CA1FEAA08C00407BED /* TransitionCompositionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505A2C91FEAA08C00407BED /* TransitionCompositionBuilder.swift */; };
-		2505A2D21FEB519A00407BED /* 1513822721.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2505A2D11FEB519A00407BED /* 1513822721.mp4 */; };
-		25092B731FEB5315009A4274 /* 1513823108.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 25092B721FEB5315009A4274 /* 1513823108.mp4 */; };
 		25864E6F1FEBB7CB00DFBEDC /* DyVideoTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 25864E6E1FEBB7CB00DFBEDC /* DyVideoTransition.m */; };
+		25864E711FEC113500DFBEDC /* movie.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 25864E701FEC113500DFBEDC /* movie.MP4 */; };
+		25864E731FECA52A00DFBEDC /* DyReverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25864E721FECA52A00DFBEDC /* DyReverse.swift */; };
+		25864E761FECA84900DFBEDC /* DyConvertImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 25864E751FECA84900DFBEDC /* DyConvertImage.m */; };
 		25DA65741FEBA15A002BD064 /* APLCompositionDebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DA65731FEBA159002BD064 /* APLCompositionDebugView.m */; };
 		25DA65781FEBA4FC002BD064 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65751FEBA4FB002BD064 /* 1.jpg */; };
 		25DA65791FEBA4FC002BD064 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65761FEBA4FC002BD064 /* 2.jpg */; };
@@ -58,12 +53,7 @@
 		2505A1D71FE8025300407BED /* DyExportURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyExportURL.swift; sourceTree = "<group>"; };
 		2505A1D91FE8040C00407BED /* DyFixOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyFixOrientation.swift; sourceTree = "<group>"; };
 		2505A1DE1FE817A000407BED /* DyLayerToVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DyLayerToVideo.swift; sourceTree = "<group>"; };
-		2505A1E21FE817D500407BED /* 01_nebula.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 01_nebula.mp4; sourceTree = "<group>"; };
-		2505A1E31FE817D500407BED /* 03_nebula.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 03_nebula.mp4; sourceTree = "<group>"; };
-		2505A1E41FE817D500407BED /* 04_quasar.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04_quasar.mp4; sourceTree = "<group>"; };
 		2505A1E51FE817D500407BED /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		2505A1E61FE817D500407BED /* 02_blackhole.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 02_blackhole.mp4; sourceTree = "<group>"; };
-		2505A1E71FE817D500407BED /* 05_blackhole.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 05_blackhole.mp4; sourceTree = "<group>"; };
 		2505A1EB1FE817D500407BED /* 02 Keep Going.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "02 Keep Going.m4a"; sourceTree = "<group>"; };
 		2505A1EC1FE817D500407BED /* 01 Star Gazing.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 Star Gazing.m4a"; sourceTree = "<group>"; };
 		2505A1EE1FE817D500407BED /* John F. Kennedy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "John F. Kennedy.m4a"; sourceTree = "<group>"; };
@@ -73,7 +63,6 @@
 		2505A2001FE8188300407BED /* DyAddBorderToVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAddBorderToVideo.m; sourceTree = "<group>"; };
 		2505A2021FE8191300407BED /* DyOverlayToVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyOverlayToVideo.h; sourceTree = "<group>"; };
 		2505A2031FE8191300407BED /* DyOverlayToVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyOverlayToVideo.m; sourceTree = "<group>"; };
-		2505A2071FE8E9F100407BED /* AVUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVUtilities.swift; sourceTree = "<group>"; };
 		2505A20B1FE8EEFF00407BED /* DyReverseVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyReverseVideo.h; sourceTree = "<group>"; };
 		2505A20C1FE8EEFF00407BED /* DyReverseVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyReverseVideo.m; sourceTree = "<group>"; };
 		2505A2111FE8FF8200407BED /* input.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = input.mov; sourceTree = "<group>"; };
@@ -87,10 +76,12 @@
 		2505A2C51FEA95CD00407BED /* DyStopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyStopViewController.h; sourceTree = "<group>"; };
 		2505A2C61FEA95CD00407BED /* DyStopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyStopViewController.m; sourceTree = "<group>"; };
 		2505A2C91FEAA08C00407BED /* TransitionCompositionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionCompositionBuilder.swift; sourceTree = "<group>"; };
-		2505A2D11FEB519A00407BED /* 1513822721.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1513822721.mp4; sourceTree = "<group>"; };
-		25092B721FEB5315009A4274 /* 1513823108.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1513823108.mp4; sourceTree = "<group>"; };
 		25864E6D1FEBB7CB00DFBEDC /* DyVideoTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyVideoTransition.h; sourceTree = "<group>"; };
 		25864E6E1FEBB7CB00DFBEDC /* DyVideoTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyVideoTransition.m; sourceTree = "<group>"; };
+		25864E701FEC113500DFBEDC /* movie.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.MP4; sourceTree = "<group>"; };
+		25864E721FECA52A00DFBEDC /* DyReverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyReverse.swift; sourceTree = "<group>"; };
+		25864E741FECA84900DFBEDC /* DyConvertImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyConvertImage.h; sourceTree = "<group>"; };
+		25864E751FECA84900DFBEDC /* DyConvertImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyConvertImage.m; sourceTree = "<group>"; };
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
 		25DA65721FEBA159002BD064 /* APLCompositionDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCompositionDebugView.h; sourceTree = "<group>"; };
 		25DA65731FEBA159002BD064 /* APLCompositionDebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCompositionDebugView.m; sourceTree = "<group>"; };
@@ -151,14 +142,8 @@
 		2505A1E11FE817D500407BED /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				2505A2D11FEB519A00407BED /* 1513822721.mp4 */,
-				25092B721FEB5315009A4274 /* 1513823108.mp4 */,
-				2505A1E21FE817D500407BED /* 01_nebula.mp4 */,
-				2505A1E31FE817D500407BED /* 03_nebula.mp4 */,
-				2505A1E41FE817D500407BED /* 04_quasar.mp4 */,
+				25864E701FEC113500DFBEDC /* movie.MP4 */,
 				2505A1E51FE817D500407BED /* star.png */,
-				2505A1E61FE817D500407BED /* 02_blackhole.mp4 */,
-				2505A1E71FE817D500407BED /* 05_blackhole.mp4 */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -194,7 +179,7 @@
 		2505A2051FE8E9F100407BED /* ReverseVideo */ = {
 			isa = PBXGroup;
 			children = (
-				2505A2071FE8E9F100407BED /* AVUtilities.swift */,
+				25864E721FECA52A00DFBEDC /* DyReverse.swift */,
 				2505A20B1FE8EEFF00407BED /* DyReverseVideo.h */,
 				2505A20C1FE8EEFF00407BED /* DyReverseVideo.m */,
 				2505A2A81FEA3F2A00407BED /* IMG_2262.MOV */,
@@ -235,6 +220,8 @@
 				2505A1D71FE8025300407BED /* DyExportURL.swift */,
 				2505A1D91FE8040C00407BED /* DyFixOrientation.swift */,
 				2505A2A41FEA1D3300407BED /* DySaveToAlbum.swift */,
+				25864E741FECA84900DFBEDC /* DyConvertImage.h */,
+				25864E751FECA84900DFBEDC /* DyConvertImage.m */,
 			);
 			path = EditorTool;
 			sourceTree = "<group>";
@@ -355,23 +342,17 @@
 				2505A1FB1FE817D500407BED /* Carl Sagan.m4a in Resources */,
 				25DA65781FEBA4FC002BD064 /* 1.jpg in Resources */,
 				25DA65791FEBA4FC002BD064 /* 2.jpg in Resources */,
-				25092B731FEB5315009A4274 /* 1513823108.mp4 in Resources */,
 				962DF3CE1FC058DD00B46309 /* LaunchScreen.storyboard in Resources */,
 				2505A1FC1FE817D500407BED /* Ronald Reagan.m4a in Resources */,
 				2505A2A91FEA3F2A00407BED /* IMG_2262.MOV in Resources */,
-				2505A1F21FE817D500407BED /* 03_nebula.mp4 in Resources */,
 				962DF3CB1FC058DD00B46309 /* Assets.xcassets in Resources */,
 				962DF3C91FC058DD00B46309 /* Main.storyboard in Resources */,
 				2505A1FA1FE817D500407BED /* John F. Kennedy.m4a in Resources */,
 				2505A1F41FE817D500407BED /* star.png in Resources */,
 				25DA657A1FEBA4FC002BD064 /* 3.jpg in Resources */,
 				2505A1F91FE817D500407BED /* 01 Star Gazing.m4a in Resources */,
+				25864E711FEC113500DFBEDC /* movie.MP4 in Resources */,
 				2505A2121FE8FF8200407BED /* input.mov in Resources */,
-				2505A2D21FEB519A00407BED /* 1513822721.mp4 in Resources */,
-				2505A1F51FE817D500407BED /* 02_blackhole.mp4 in Resources */,
-				2505A1F31FE817D500407BED /* 04_quasar.mp4 in Resources */,
-				2505A1F11FE817D500407BED /* 01_nebula.mp4 in Resources */,
-				2505A1F61FE817D500407BED /* 05_blackhole.mp4 in Resources */,
 				2505A1F81FE817D500407BED /* 02 Keep Going.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,16 +373,17 @@
 				2505A2C41FEA92BB00407BED /* DyStopMotion.m in Sources */,
 				25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */,
 				25E24FBA1FE767CF003C4EFB /* DyReadAndWrite.m in Sources */,
-				2505A20A1FE8E9F100407BED /* AVUtilities.swift in Sources */,
 				2505A2C71FEA95CD00407BED /* DyStopViewController.m in Sources */,
 				962DF3C61FC058DD00B46309 /* ViewController.swift in Sources */,
 				25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */,
+				25864E761FECA84900DFBEDC /* DyConvertImage.m in Sources */,
 				2505A2011FE8188300407BED /* DyAddBorderToVideo.m in Sources */,
 				2505A2AC1FEA55AD00407BED /* DyPictureToVideo.swift in Sources */,
 				962DF3C41FC058DD00B46309 /* AppDelegate.swift in Sources */,
 				25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */,
 				25DA65741FEBA15A002BD064 /* APLCompositionDebugView.m in Sources */,
 				2505A20D1FE8EEFF00407BED /* DyReverseVideo.m in Sources */,
+				25864E731FECA52A00DFBEDC /* DyReverse.swift in Sources */,
 				2505A2161FE9022B00407BED /* DyTransitionViewController.swift in Sources */,
 				2505A1DF1FE817A100407BED /* DyLayerToVideo.swift in Sources */,
 				2505A1DA1FE8040C00407BED /* DyFixOrientation.swift in Sources */,

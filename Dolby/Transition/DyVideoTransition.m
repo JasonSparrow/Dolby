@@ -226,7 +226,6 @@
         }
     }
     
-    //AVMutableVideoComposition *videoComposition = [AVMutableVideoComposition videoComposition];
     videoComposition.instructions = instructions;
     videoComposition.renderSize = CGSizeMake(videoWidth, videoHeight);
     videoComposition.frameDuration = CMTimeMake(1, 30);

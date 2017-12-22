@@ -1,9 +1,16 @@
+//
+//  DyReverse.swift
+//  Dolby
+//
+//  Created by hr on 2017/12/22.
+//  Copyright © 2017年 王腾飞. All rights reserved.
+//
+
 import UIKit
 import AVFoundation
 
-class AVUtilities {
-    
-    static func reverse(_ original: AVAsset, outputURL: URL, completion: @escaping (AVAsset) -> Void) {
+class DyReverse: NSObject {
+    class func reverse(_ original: AVAsset, outputURL: URL, completion: @escaping (AVAsset) -> Void) {
         
         // Initialize the reader
         
@@ -75,4 +82,3 @@ class AVUtilities {
         }
     }
 }
-

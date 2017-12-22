@@ -42,9 +42,11 @@
     AVAssetWriter *writer = [[AVAssetWriter alloc] initWithURL:outputURL
                                                       fileType:AVFileTypeQuickTimeMovie
                                                          error:&error];
+    //视频的压缩配置.比特率
     NSDictionary *videoCompressionProps = [NSDictionary dictionaryWithObjectsAndKeys:
                                            @(videoTrack.estimatedDataRate), AVVideoAverageBitRateKey,
                                            nil];
+    //视频的参数配置：h264编码
     NSDictionary *writerOutputSettings = [NSDictionary dictionaryWithObjectsAndKeys:
                                           AVVideoCodecH264, AVVideoCodecKey,
                                           [NSNumber numberWithInt:videoTrack.naturalSize.width], AVVideoWidthKey,
@@ -57,12 +59,12 @@
                                                                    sourceFormatHint:(__bridge CMFormatDescriptionRef)[videoTrack.formatDescriptions lastObject]];
     //如果数据源是时时的, 需要设置为YES, 例如从摄像机获取数据, 否则设置为NO
     [writerInput setExpectsMediaDataInRealTime:NO];
-    
+    //设置合成视频的方向与原视频方向一致
+    writerInput.transform = videoTrack.preferredTransform;
     
     //下面翻转并保存文件
     // 我们创建一个AVAssetWriterInputPixelBufferAdaptor对象作为写入器输入的适配器。这将允许输入读入每帧的像素缓冲区。
     AVAssetWriterInputPixelBufferAdaptor *pixelBufferAdaptor = [[AVAssetWriterInputPixelBufferAdaptor alloc] initWithAssetWriterInput:writerInput sourcePixelBufferAttributes:nil];
-    
     
     [writer addInput:writerInput];
     [writer startWriting];
@@ -76,7 +78,7 @@
         
         // 获取帧显示的时间范围
         CMTime presentationTime = CMSampleBufferGetPresentationTimeStamp((__bridge CMSampleBufferRef)sampleBuffer[i]);
-        
+        CMTimeShow(presentationTime);
         // 从数组的尾部获取 image/pixel buffer
         CVPixelBufferRef imageBufferRef = CMSampleBufferGetImageBuffer((__bridge CMSampleBufferRef)sampleBuffer[sampleBuffer.count - i - 1]);
         
