@@ -17,13 +17,13 @@ class DyTransitionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url1 = Bundle.main.url(forResource: "1513822721", withExtension: "mp4")
+        let url1 = Bundle.main.url(forResource: "movie", withExtension: "MP4")
         let asset1 = AVAsset(url: url1!)
-        let url2 = Bundle.main.url(forResource: "1513823108", withExtension: "mp4")
+        let url2 = Bundle.main.url(forResource: "movie", withExtension: "MP4")
         let asset2 = AVAsset(url: url2!)
-        let url3 = Bundle.main.url(forResource: "1513822721", withExtension: "mp4")
+        let url3 = Bundle.main.url(forResource: "movie", withExtension: "MP4")
         let asset3 = AVAsset(url: url3!)
-        let url4 = Bundle.main.url(forResource: "1513823108", withExtension: "mp4")
+        let url4 = Bundle.main.url(forResource: "movie", withExtension: "MP4")
         let asset4 = AVAsset(url: url4!)
         
         let videoAssets = [asset1, asset2, asset3, asset4]

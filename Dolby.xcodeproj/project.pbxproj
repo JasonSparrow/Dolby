@@ -45,7 +45,6 @@
 		962DF3C61FC058DD00B46309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DF3C51FC058DD00B46309 /* ViewController.swift */; };
 		962DF3C91FC058DD00B46309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962DF3C71FC058DD00B46309 /* Main.storyboard */; };
 		962DF3CB1FC058DD00B46309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962DF3CA1FC058DD00B46309 /* Assets.xcassets */; };
-		962DF3CE1FC058DD00B46309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962DF3CC1FC058DD00B46309 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,7 +99,6 @@
 		962DF3C51FC058DD00B46309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		962DF3C81FC058DD00B46309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		962DF3CA1FC058DD00B46309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		962DF3CD1FC058DD00B46309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		962DF3CF1FC058DD00B46309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,7 +270,6 @@
 				25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */,
 				962DF3C71FC058DD00B46309 /* Main.storyboard */,
 				962DF3CA1FC058DD00B46309 /* Assets.xcassets */,
-				962DF3CC1FC058DD00B46309 /* LaunchScreen.storyboard */,
 				962DF3CF1FC058DD00B46309 /* Info.plist */,
 			);
 			path = Dolby;
@@ -342,7 +339,6 @@
 				2505A1FB1FE817D500407BED /* Carl Sagan.m4a in Resources */,
 				25DA65781FEBA4FC002BD064 /* 1.jpg in Resources */,
 				25DA65791FEBA4FC002BD064 /* 2.jpg in Resources */,
-				962DF3CE1FC058DD00B46309 /* LaunchScreen.storyboard in Resources */,
 				2505A1FC1FE817D500407BED /* Ronald Reagan.m4a in Resources */,
 				2505A2A91FEA3F2A00407BED /* IMG_2262.MOV in Resources */,
 				962DF3CB1FC058DD00B46309 /* Assets.xcassets in Resources */,
@@ -400,14 +396,6 @@
 				962DF3C81FC058DD00B46309 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		962DF3CC1FC058DD00B46309 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				962DF3CD1FC058DD00B46309 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -524,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 755C599725;
@@ -535,7 +524,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Dolby/Dolby-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -543,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 755C599725;
@@ -553,7 +543,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dolby/Dolby-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

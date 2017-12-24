@@ -88,7 +88,7 @@
 }
 
 /*
- *
+ * 从代码可以看出来，这个转换有点复杂，中间经历了多个步骤，所以性能是很差的，只适合偶尔转换一张图片，用于调试截图等，用于显示视频肯定是不行的。
  */
 + (UIImage*)uiImageFromPixelBuffer:(CVPixelBufferRef)p {
     CIImage* ciImage = [CIImage imageWithCVPixelBuffer:p];

@@ -83,7 +83,10 @@
     [imageLayer addAnimation:rotationAnimation forKey:@"rotateAnimation"];
     
     
-    DyVideoTransition *dy = [[DyVideoTransition alloc] init];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"movie" withExtension:@"MP4"];
+    AVAsset *asset = [AVAsset assetWithURL:url];
+    
+    DyVideoTransition *dy = [[DyVideoTransition alloc] initWithAssets:@[asset]];
     self.playItem = dy.makePlayable;
     [_playItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     _play = [AVPlayer playerWithPlayerItem:_playItem];

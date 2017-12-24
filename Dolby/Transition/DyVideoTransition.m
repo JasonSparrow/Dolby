@@ -43,7 +43,7 @@
 }
 
 - (NSArray <AVAsset *>*)setA_BTrack {
-    _compositionVideoTracks = [self getVideoTracks];
+    self.compositionVideoTracks = [self getVideoTracks];
     /*
      这个方法是来设置A-B模式
      */
@@ -159,6 +159,7 @@
         //3. 为活动组合创建一个新的AVMutableVideoCompositionLayerInstruction, 将它添加到数组中, 并设置它作为组合指令的layerInstructions属性, 组合的通过时间范围区域只需要一个与要呈现视频的轨道相关的单独层指令
         AVMutableVideoCompositionLayerInstruction *passThroughLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:currentVideoTrack];
         
+        [passThroughLayerInstruction setTransform:currentVideoTrack.preferredTransform atTime:kCMTimeZero];
         passThroughInstruction.layerInstructions = @[passThroughLayerInstruction];
         [instructions addObject:passThroughInstruction];
         
@@ -176,13 +177,11 @@
             
             //6. 为每一个轨道创建一个AVMutableVideoCompositionLayerInstruction实例, 在这些层指令上定义从一个场景到另一个场景的过渡效果, 本利中没有使用过渡效果, 在后面的示例中使用了.
             AVMutableVideoCompositionLayerInstruction *fromLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:foregroundTrack];
+            [fromLayerInstruction setTransform:foregroundTrack.preferredTransform atTime:kCMTimeZero];
             
             AVMutableVideoCompositionLayerInstruction *toLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:backgroundTrack];
-            //----------------------
-            //            [fromLayerInstruction setOpacityRampFromStartOpacity:1.0
-            //                                                    toEndOpacity:0.0
-            //                                                       timeRange:timeRange];
-            //----------------------
+            
+            [toLayerInstruction setTransform:backgroundTrack.preferredTransform atTime:kCMTimeZero];
             
             
             //--------------------------
@@ -206,17 +205,6 @@
                                               timeRange:timeRange];
             //--------------------------
             
-            //--------------------------------
-//            CGFloat videoWidth = videoComposition.renderSize.width;
-//            CGFloat videoHeight = videoComposition.renderSize.height;
-//
-//            CGRect startRect = CGRectMake(0.0f, 0.0f, videoWidth, videoHeight);
-//            CGRect endRect = CGRectMake(0.0f, videoHeight, videoWidth, 0.0f);
-//
-//            [fromLayerInstruction setCropRectangleRampFromStartCropRectangle:startRect
-//                                                          toEndCropRectangle:endRect
-//                                                                   timeRange:timeRange];
-            //--------------------------------
             
             //7. 将两个层指令都添加到数组中, 并设置他们作为当前组合指令的layerInstructions属性值, 对这一数组中的元素排序非常重要, 因为它定义了组合输出中视频图层的Z轴顺序
             transitionInstruction.layerInstructions = @[fromLayerInstruction, toLayerInstruction];
