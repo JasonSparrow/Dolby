@@ -7,6 +7,10 @@
 //
 
 #import "DyVideoTransition.h"
+/*
+ * OC 中使用Swift 必须要添加的头文件, 这个头文件是系统自动创建的, 只需引入即可. 
+ */
+#import "Dolby-Swift.h"
 
 @interface DyVideoTransition()
 {
@@ -159,7 +163,9 @@
         //3. 为活动组合创建一个新的AVMutableVideoCompositionLayerInstruction, 将它添加到数组中, 并设置它作为组合指令的layerInstructions属性, 组合的通过时间范围区域只需要一个与要呈现视频的轨道相关的单独层指令
         AVMutableVideoCompositionLayerInstruction *passThroughLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:currentVideoTrack];
         
+
         [passThroughLayerInstruction setTransform:currentVideoTrack.preferredTransform atTime:kCMTimeZero];
+        
         passThroughInstruction.layerInstructions = @[passThroughLayerInstruction];
         [instructions addObject:passThroughInstruction];
         

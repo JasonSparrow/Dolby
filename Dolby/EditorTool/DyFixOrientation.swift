@@ -10,6 +10,10 @@ import UIKit
 
 class DyFixOrientation: NSObject {
     
+    /*
+     * 获取视频方向(角度)
+     * transform: 参数为轨道的CGAffineTransform
+     */
     class func orientationFromTransform(transform: CGAffineTransform) -> (orientation: UIImageOrientation, isPortrait: Bool) {
         var assetOrientation = UIImageOrientation.up
         var isPortrait = false

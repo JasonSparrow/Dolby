@@ -90,7 +90,7 @@
             NSLog(@"idx==%d",idx);
             CVPixelBufferRef buffer =(CVPixelBufferRef)[self pixelBufferFromCGImage:[[self.imageArr objectAtIndex:idx]CGImage]size:size];
             if (buffer){
-                //
+                //这个方法就可以把图像写入到视频中，但是这个图像我们从何而来呢。ios的图像类似乎只有UIImage，那么UIImage如何变成我们需要的CVPixelBuffer呢。
                 if(![adaptor appendPixelBuffer:buffer withPresentationTime:CMTimeMake(frame,10)]) {
                     NSLog(@"FAIL");
                 }else {
@@ -103,39 +103,28 @@
 }
     
 - (CVPixelBufferRef)pixelBufferFromCGImage:(CGImageRef)image size:(CGSize)size{
-    
     NSDictionary *options =[NSDictionary dictionaryWithObjectsAndKeys:
-                            
                             [NSNumber numberWithBool:YES],kCVPixelBufferCGImageCompatibilityKey,
-                            
                             [NSNumber numberWithBool:YES],kCVPixelBufferCGBitmapContextCompatibilityKey,nil];
     
     CVPixelBufferRef pxbuffer =NULL;
-    
-    CVReturn status =CVPixelBufferCreate(kCFAllocatorDefault,size.width,size.height,kCVPixelFormatType_32ARGB,(__bridge CFDictionaryRef) options,&pxbuffer);
-    
+    CVReturn status = CVPixelBufferCreate(kCFAllocatorDefault,
+                                         size.width,
+                                         size.height,
+                                         kCVPixelFormatType_32ARGB,
+                                         (__bridge CFDictionaryRef) options,&pxbuffer
+                                         );
     NSParameterAssert(status ==kCVReturnSuccess && pxbuffer !=NULL);
-    
     CVPixelBufferLockBaseAddress(pxbuffer,0);
-    
     void *pxdata =CVPixelBufferGetBaseAddress(pxbuffer);
-    
     NSParameterAssert(pxdata !=NULL);
-    
     CGColorSpaceRef rgbColorSpace=CGColorSpaceCreateDeviceRGB();
-    
     CGContextRef context =CGBitmapContextCreate(pxdata,size.width,size.height,8,4*size.width,rgbColorSpace,kCGImageAlphaPremultipliedFirst);
-    
     NSParameterAssert(context);
-    
     CGContextDrawImage(context,CGRectMake(0,0,CGImageGetWidth(image),CGImageGetHeight(image)), image);
-    
     CGColorSpaceRelease(rgbColorSpace);
-    
     CGContextRelease(context);
-    
     CVPixelBufferUnlockBaseAddress(pxbuffer,0);
-    
     return pxbuffer;}
     
 -(void)playAction{
