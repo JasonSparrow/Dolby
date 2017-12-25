@@ -131,24 +131,6 @@
     
     AVMutableVideoComposition *videoComposition = [AVMutableVideoComposition videoCompositionWithPropertiesOfAsset:_composition];
     
-    
-    CGFloat videoWidth = 0;
-    CGFloat videoHeight = 0;
-    CGAffineTransform transform;
-    
-    AVMutableCompositionTrack *track = videoTracks[0];
-    CGFloat videoAngleInDegree  = atan2(track.preferredTransform.b, track.preferredTransform.a) * 180 / M_PI;
-    if (videoAngleInDegree == 90) {
-        videoWidth = _composition.naturalSize.height;
-        videoHeight = _composition.naturalSize.width;
-        CGAffineTransform tran = track.preferredTransform;
-        transform = CGAffineTransformConcat(tran, CGAffineTransformMakeTranslation(videoWidth, 0.0));
-    } else {
-        videoWidth = _composition.naturalSize.width;
-        videoHeight = _composition.naturalSize.height;
-        transform = track.preferredTransform;
-    }
-    
     //1. 首先遍历之前计算的所有通过时间范围, 循环在两个需要创建所需指令的视频轨道间前后切换
     for (int i = 0; i < passThroughTimeRanges.count; i++) {
         //奇偶切换, 0, 1, 0, 1, etc
@@ -162,9 +144,6 @@
         
         //3. 为活动组合创建一个新的AVMutableVideoCompositionLayerInstruction, 将它添加到数组中, 并设置它作为组合指令的layerInstructions属性, 组合的通过时间范围区域只需要一个与要呈现视频的轨道相关的单独层指令
         AVMutableVideoCompositionLayerInstruction *passThroughLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:currentVideoTrack];
-        
-
-        [passThroughLayerInstruction setTransform:currentVideoTrack.preferredTransform atTime:kCMTimeZero];
         
         passThroughInstruction.layerInstructions = @[passThroughLayerInstruction];
         [instructions addObject:passThroughInstruction];
@@ -183,11 +162,8 @@
             
             //6. 为每一个轨道创建一个AVMutableVideoCompositionLayerInstruction实例, 在这些层指令上定义从一个场景到另一个场景的过渡效果, 本利中没有使用过渡效果, 在后面的示例中使用了.
             AVMutableVideoCompositionLayerInstruction *fromLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:foregroundTrack];
-            [fromLayerInstruction setTransform:foregroundTrack.preferredTransform atTime:kCMTimeZero];
             
             AVMutableVideoCompositionLayerInstruction *toLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:backgroundTrack];
-            
-            [toLayerInstruction setTransform:backgroundTrack.preferredTransform atTime:kCMTimeZero];
             
             
             //--------------------------
@@ -221,7 +197,7 @@
     }
     
     videoComposition.instructions = instructions;
-    videoComposition.renderSize = CGSizeMake(videoWidth, videoHeight);
+    videoComposition.renderSize = CGSizeMake(_composition.naturalSize.width, _composition.naturalSize.height);
     videoComposition.frameDuration = CMTimeMake(1, 30);
     videoComposition.renderScale = 1.0f;
     

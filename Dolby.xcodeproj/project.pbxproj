@@ -33,6 +33,7 @@
 		25864E711FEC113500DFBEDC /* movie.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 25864E701FEC113500DFBEDC /* movie.MP4 */; };
 		25864E731FECA52A00DFBEDC /* DyReverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25864E721FECA52A00DFBEDC /* DyReverse.swift */; };
 		25864E761FECA84900DFBEDC /* DyConvertImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 25864E751FECA84900DFBEDC /* DyConvertImage.m */; };
+		25B59EBD1FF08BA500F9685B /* DyFixOrientationOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B59EBC1FF08BA500F9685B /* DyFixOrientationOC.m */; };
 		25DA65741FEBA15A002BD064 /* APLCompositionDebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DA65731FEBA159002BD064 /* APLCompositionDebugView.m */; };
 		25DA65781FEBA4FC002BD064 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65751FEBA4FB002BD064 /* 1.jpg */; };
 		25DA65791FEBA4FC002BD064 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65761FEBA4FC002BD064 /* 2.jpg */; };
@@ -81,6 +82,8 @@
 		25864E721FECA52A00DFBEDC /* DyReverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyReverse.swift; sourceTree = "<group>"; };
 		25864E741FECA84900DFBEDC /* DyConvertImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyConvertImage.h; sourceTree = "<group>"; };
 		25864E751FECA84900DFBEDC /* DyConvertImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyConvertImage.m; sourceTree = "<group>"; };
+		25B59EBB1FF08BA500F9685B /* DyFixOrientationOC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyFixOrientationOC.h; sourceTree = "<group>"; };
+		25B59EBC1FF08BA500F9685B /* DyFixOrientationOC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyFixOrientationOC.m; sourceTree = "<group>"; };
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
 		25DA65721FEBA159002BD064 /* APLCompositionDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCompositionDebugView.h; sourceTree = "<group>"; };
 		25DA65731FEBA159002BD064 /* APLCompositionDebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCompositionDebugView.m; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				2505A1D51FE8020800407BED /* DyAssetExportSession.swift */,
 				2505A1D71FE8025300407BED /* DyExportURL.swift */,
 				2505A1D91FE8040C00407BED /* DyFixOrientation.swift */,
+				25B59EBB1FF08BA500F9685B /* DyFixOrientationOC.h */,
+				25B59EBC1FF08BA500F9685B /* DyFixOrientationOC.m */,
 				2505A2A41FEA1D3300407BED /* DySaveToAlbum.swift */,
 				25864E741FECA84900DFBEDC /* DyConvertImage.h */,
 				25864E751FECA84900DFBEDC /* DyConvertImage.m */,
@@ -362,6 +367,7 @@
 			files = (
 				2505A2141FE8FFD200407BED /* DyReverseViewController.swift in Sources */,
 				2505A2041FE8191300407BED /* DyOverlayToVideo.m in Sources */,
+				25B59EBD1FF08BA500F9685B /* DyFixOrientationOC.m in Sources */,
 				2505A2A51FEA1D3300407BED /* DySaveToAlbum.swift in Sources */,
 				2505A2CA1FEAA08C00407BED /* TransitionCompositionBuilder.swift in Sources */,
 				2505A1D61FE8020800407BED /* DyAssetExportSession.swift in Sources */,
