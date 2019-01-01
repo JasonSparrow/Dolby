@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FY3-Q8-8QL">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FY3-Q8-8QL">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,36 +18,32 @@
                         <viewControllerLayoutGuide type="bottom" id="n5b-O6-4GQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4r-VU-HDc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4r-VU-HDc">
                                 <rect key="frame" x="46" y="153" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="倒放"/>
                                 <connections>
                                     <action selector="playBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1a-Yv-ic0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dra-mu-9pE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dra-mu-9pE">
                                 <rect key="frame" x="46" y="246" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="动画"/>
                                 <connections>
                                     <action selector="animation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6cu-sW-Zri"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18j-aH-s5G">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18j-aH-s5G">
                                 <rect key="frame" x="46" y="346" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="过渡"/>
                                 <connections>
                                     <action selector="transition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDW-ay-J2P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvu-pV-cTn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvu-pV-cTn">
                                 <rect key="frame" x="23" y="440" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="图片到视频"/>
                                 <connections>
                                     <action selector="picToVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oe-u4-4cL"/>
@@ -55,6 +51,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pvu-pV-cTn" firstAttribute="top" secondItem="18j-aH-s5G" secondAttribute="bottom" constant="64" id="9ng-NX-LWX"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B4r-VU-HDc" secondAttribute="trailing" constant="20" symbolic="YES" id="JXj-ho-Zdt"/>
+                            <constraint firstItem="Dra-mu-9pE" firstAttribute="centerX" secondItem="pvu-pV-cTn" secondAttribute="centerX" id="Tcg-UZ-SRt"/>
+                            <constraint firstItem="18j-aH-s5G" firstAttribute="top" secondItem="Dra-mu-9pE" secondAttribute="bottom" constant="70" id="dt8-rn-5Hu"/>
+                            <constraint firstItem="Dra-mu-9pE" firstAttribute="top" secondItem="B4r-VU-HDc" secondAttribute="bottom" constant="63" id="g6K-wx-YAi"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="18j-aH-s5G" secondAttribute="trailing" constant="20" symbolic="YES" id="gl9-io-HOs"/>
+                            <constraint firstItem="Dra-mu-9pE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="tWu-eW-SzZ"/>
+                            <constraint firstItem="Dra-mu-9pE" firstAttribute="leading" secondItem="18j-aH-s5G" secondAttribute="leading" id="u23-np-OXw"/>
+                            <constraint firstItem="Dra-mu-9pE" firstAttribute="leading" secondItem="B4r-VU-HDc" secondAttribute="leading" id="v3d-jw-bVF"/>
+                            <constraint firstItem="Dra-mu-9pE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="246" id="wkQ-5c-0Cx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fIE-kA-CF9"/>
                 </viewController>
@@ -68,7 +76,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FY3-Q8-8QL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ga0-S6-crs">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

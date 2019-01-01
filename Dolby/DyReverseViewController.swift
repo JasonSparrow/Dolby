@@ -17,12 +17,12 @@ class DyReverseViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         
-        let url = Bundle.main.url(forResource: "movie", withExtension: "MP4")
+        let url = Bundle.main.url(forResource: "input", withExtension: "mov")
         let asset = AVAsset(url: url!)
         
         let date = Date()
         print("开始 - \(Date())")
-        DyReverseVideo.asset(byReversing: asset, outputURL: DyExportURL.exportURL() as URL!) { (asset) in
+        DyReverseVideo.asset(byReversing: asset, outputURL: DyExportURL.exportURL() as URL) { (asset) in
 
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
 //                DySaveToAlbum.saveToAlbum(outputURL: DyExportURL.exportURL() as URL)
