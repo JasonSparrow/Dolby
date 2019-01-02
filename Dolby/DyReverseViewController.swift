@@ -7,11 +7,9 @@
 //
 
 import UIKit
+import AVKit
 
 class DyReverseViewController: UIViewController {
-    
-    var play:AVPlayer!
-    var playItem:AVPlayerItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,36 +23,19 @@ class DyReverseViewController: UIViewController {
         DyReverseVideo.asset(byReversing: asset, outputURL: DyExportURL.exportURL() as URL) { (asset) in
 
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-//                DySaveToAlbum.saveToAlbum(outputURL: DyExportURL.exportURL() as URL)
-                self.playItem = AVPlayerItem(asset: asset!)
-                self.playItem.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.new, context: nil)
-                self.play = AVPlayer(playerItem: self.playItem)
                 
-                let playLayer = AVPlayerLayer(player: self.play)
-                playLayer.backgroundColor = UIColor.red.cgColor
-                playLayer.frame = self.view.bounds
-                self.view.layer.addSublayer(playLayer)
+//                DySaveToAlbum.saveToAlbum(outputURL: DyExportURL.exportURL() as URL)
+                let playItem = AVPlayerItem(asset: asset!)
+                let play = AVPlayer(playerItem: playItem)
+                let player = AVPlayerViewController.init()
+                player.player = play
+                self.present(player, animated: true, completion: {
+                    
+                })
             }
-
         }
         print("结束 - \(Date().timeIntervalSince(date))")
-        
     }
-    
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        switch play.status {
-        case .readyToPlay:
-            play.play()
-            print("play")
-        case .failed:
-            print("fail")
-        default:
-            print("unknow")
-        }
-    }
-    
-    deinit {
-        playItem.removeObserver(self, forKeyPath: "status", context: nil)
-    }
+
    
 }
