@@ -9,7 +9,7 @@
 #import "DyStopViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <CoreMedia/CoreMedia.h>
-#import <MediaPlayer/MediaPlayer.h>
+#import <AVKit/AVKit.h>
 
 @interface DyStopViewController ()
 @property(nonatomic, strong)NSMutableArray *imageArr;
@@ -23,7 +23,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.imageArr =[[NSMutableArray alloc]initWithObjects:
-                    [UIImage imageNamed:@"1.jpg"],[UIImage imageNamed:@"2.jpg"],[UIImage imageNamed:@"3.jpg"],[UIImage imageNamed:@"1.jpg"],[UIImage imageNamed:@"2.jpg"],[UIImage imageNamed:@"3.jpg"],[UIImage imageNamed:@"1.jpg"],[UIImage imageNamed:@"2.jpg"],[UIImage imageNamed:@"3.jpg"],[UIImage imageNamed:@"1.jpg"],[UIImage imageNamed:@"2.jpg"],[UIImage imageNamed:@"3.jpg"],[UIImage imageNamed:@"1.jpg"],[UIImage imageNamed:@"2.jpg"],[UIImage imageNamed:@"3.jpg"],[UIImage imageNamed:@"1.jpg"],[UIImage imageNamed:@"2.jpg"],[UIImage imageNamed:@"3.jpg"],nil];
+                    [UIImage imageNamed:@"1.jpeg"],[UIImage imageNamed:@"2.jpeg"],[UIImage imageNamed:@"3.jpeg"],[UIImage imageNamed:@"1.jpeg"],[UIImage imageNamed:@"2.jpeg"],[UIImage imageNamed:@"3.jpeg"],[UIImage imageNamed:@"1.jpeg"],[UIImage imageNamed:@"2.jpeg"],[UIImage imageNamed:@"3.jpeg"],[UIImage imageNamed:@"1.jpeg"],[UIImage imageNamed:@"2.jpeg"],[UIImage imageNamed:@"3.jpeg"],[UIImage imageNamed:@"1.jpeg"],[UIImage imageNamed:@"2.jpeg"],[UIImage imageNamed:@"3.jpeg"],[UIImage imageNamed:@"1.jpeg"],[UIImage imageNamed:@"2.jpeg"],[UIImage imageNamed:@"3.jpeg"],nil];
     
     UIButton * button =[UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setFrame:CGRectMake(100,100, 100,100)];
@@ -129,11 +129,12 @@
     
 -(void)playAction{
     
-    MPMoviePlayerViewController *theMovie =[[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL fileURLWithPath:self.theVideoPath]];
-    
-    [self presentMoviePlayerViewControllerAnimated:theMovie];
-    
-    theMovie.moviePlayer.movieSourceType=MPMovieSourceTypeFile;[theMovie.moviePlayer play];
+    AVPlayerViewController *player = [[AVPlayerViewController alloc] init];
+    player.player = [[AVPlayer alloc] initWithURL:[NSURL fileURLWithPath:self.theVideoPath]];
+    [self presentViewController:player animated:YES completion:^{
+        
+    }];
+
     
 }
     

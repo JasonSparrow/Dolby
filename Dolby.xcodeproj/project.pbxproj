@@ -35,9 +35,6 @@
 		25864E761FECA84900DFBEDC /* DyConvertImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 25864E751FECA84900DFBEDC /* DyConvertImage.m */; };
 		25B59EBD1FF08BA500F9685B /* DyFixOrientationOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B59EBC1FF08BA500F9685B /* DyFixOrientationOC.m */; };
 		25DA65741FEBA15A002BD064 /* APLCompositionDebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DA65731FEBA159002BD064 /* APLCompositionDebugView.m */; };
-		25DA65781FEBA4FC002BD064 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65751FEBA4FB002BD064 /* 1.jpg */; };
-		25DA65791FEBA4FC002BD064 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65761FEBA4FC002BD064 /* 2.jpg */; };
-		25DA657A1FEBA4FC002BD064 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25DA65771FEBA4FC002BD064 /* 3.jpg */; };
 		25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */; };
 		25E24FB21FE76306003C4EFB /* DyMergeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */; };
 		25E24FB71FE7677F003C4EFB /* DyGenerateThumbnails.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E24FB61FE7677F003C4EFB /* DyGenerateThumbnails.m */; };
@@ -46,6 +43,9 @@
 		962DF3C61FC058DD00B46309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DF3C51FC058DD00B46309 /* ViewController.swift */; };
 		962DF3C91FC058DD00B46309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962DF3C71FC058DD00B46309 /* Main.storyboard */; };
 		962DF3CB1FC058DD00B46309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962DF3CA1FC058DD00B46309 /* Assets.xcassets */; };
+		96413D1721DC5E910055A0A2 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96413D1421DC5E900055A0A2 /* 1.jpeg */; };
+		96413D1821DC5E910055A0A2 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96413D1521DC5E910055A0A2 /* 2.jpeg */; };
+		96413D1921DC5E910055A0A2 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96413D1621DC5E910055A0A2 /* 3.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,9 +87,6 @@
 		25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dolby-Bridging-Header.h"; sourceTree = "<group>"; };
 		25DA65721FEBA159002BD064 /* APLCompositionDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLCompositionDebugView.h; sourceTree = "<group>"; };
 		25DA65731FEBA159002BD064 /* APLCompositionDebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLCompositionDebugView.m; sourceTree = "<group>"; };
-		25DA65751FEBA4FB002BD064 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
-		25DA65761FEBA4FC002BD064 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		25DA65771FEBA4FC002BD064 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		25E24FAA1FE65621003C4EFB /* DyAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DyAnimationViewController.h; sourceTree = "<group>"; };
 		25E24FAB1FE65621003C4EFB /* DyAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DyAnimationViewController.m; sourceTree = "<group>"; };
 		25E24FB11FE76306003C4EFB /* DyMergeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyMergeVideo.swift; sourceTree = "<group>"; };
@@ -103,6 +100,9 @@
 		962DF3C81FC058DD00B46309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		962DF3CA1FC058DD00B46309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		962DF3CF1FC058DD00B46309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96413D1421DC5E900055A0A2 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
+		96413D1521DC5E910055A0A2 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
+		96413D1621DC5E910055A0A2 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +131,9 @@
 		2505A1E01FE817D500407BED /* VideoResource */ = {
 			isa = PBXGroup;
 			children = (
-				25DA65751FEBA4FB002BD064 /* 1.jpg */,
-				25DA65761FEBA4FC002BD064 /* 2.jpg */,
-				25DA65771FEBA4FC002BD064 /* 3.jpg */,
+				96413D1421DC5E900055A0A2 /* 1.jpeg */,
+				96413D1521DC5E910055A0A2 /* 2.jpeg */,
+				96413D1621DC5E910055A0A2 /* 3.jpeg */,
 				2505A1E11FE817D500407BED /* Video */,
 				2505A1E91FE817D500407BED /* Audio */,
 			);
@@ -341,16 +341,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96413D1821DC5E910055A0A2 /* 2.jpeg in Resources */,
 				2505A1FB1FE817D500407BED /* Carl Sagan.m4a in Resources */,
-				25DA65781FEBA4FC002BD064 /* 1.jpg in Resources */,
-				25DA65791FEBA4FC002BD064 /* 2.jpg in Resources */,
 				2505A1FC1FE817D500407BED /* Ronald Reagan.m4a in Resources */,
 				2505A2A91FEA3F2A00407BED /* IMG_2262.MOV in Resources */,
 				962DF3CB1FC058DD00B46309 /* Assets.xcassets in Resources */,
+				96413D1921DC5E910055A0A2 /* 3.jpeg in Resources */,
 				962DF3C91FC058DD00B46309 /* Main.storyboard in Resources */,
 				2505A1FA1FE817D500407BED /* John F. Kennedy.m4a in Resources */,
 				2505A1F41FE817D500407BED /* star.png in Resources */,
-				25DA657A1FEBA4FC002BD064 /* 3.jpg in Resources */,
+				96413D1721DC5E910055A0A2 /* 1.jpeg in Resources */,
 				2505A1F91FE817D500407BED /* 01 Star Gazing.m4a in Resources */,
 				25864E711FEC113500DFBEDC /* movie.MP4 in Resources */,
 				2505A2121FE8FF8200407BED /* input.mov in Resources */,
