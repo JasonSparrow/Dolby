@@ -13,5 +13,6 @@
  生成一视频的缩略图
  */
 @interface DyGenerateThumbnails : NSObject
+@property (nonatomic, copy) void(^callback)(NSArray <UIImage *>* imageList);
 - (void)generateThumbnails:(AVAsset *)asset;
 @end

@@ -70,6 +70,7 @@
         if (--imageCount == 0) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSLog(@"%@", images);
+                self.callback(images);
             });
         }
     };
