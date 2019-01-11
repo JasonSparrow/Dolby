@@ -21,48 +21,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4r-VU-HDc">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4r-VU-HDc">
                                 <rect key="frame" x="46" y="153" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="倒放"/>
                                 <connections>
                                     <action selector="playBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1a-Yv-ic0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dra-mu-9pE">
-                                <rect key="frame" x="46" y="246" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dra-mu-9pE">
+                                <rect key="frame" x="126" y="153" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="动画"/>
                                 <connections>
                                     <action selector="animation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6cu-sW-Zri"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18j-aH-s5G">
-                                <rect key="frame" x="46" y="346" width="31" height="30"/>
-                                <state key="normal" title="过渡"/>
-                                <connections>
-                                    <action selector="transition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDW-ay-J2P"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvu-pV-cTn">
-                                <rect key="frame" x="23" y="440" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvu-pV-cTn">
+                                <rect key="frame" x="264" y="153" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="图片到视频"/>
                                 <connections>
                                     <action selector="picToVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oe-u4-4cL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcL-ww-lFP">
+                                <rect key="frame" x="23" y="219" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="视频到图片"/>
+                                <connections>
+                                    <action selector="generator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rlp-wc-57Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18j-aH-s5G">
+                                <rect key="frame" x="197" y="153" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="过渡"/>
+                                <connections>
+                                    <action selector="transition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nDW-ay-J2P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="pvu-pV-cTn" firstAttribute="top" secondItem="18j-aH-s5G" secondAttribute="bottom" constant="64" id="9ng-NX-LWX"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B4r-VU-HDc" secondAttribute="trailing" constant="20" symbolic="YES" id="JXj-ho-Zdt"/>
-                            <constraint firstItem="Dra-mu-9pE" firstAttribute="centerX" secondItem="pvu-pV-cTn" secondAttribute="centerX" id="Tcg-UZ-SRt"/>
-                            <constraint firstItem="18j-aH-s5G" firstAttribute="top" secondItem="Dra-mu-9pE" secondAttribute="bottom" constant="70" id="dt8-rn-5Hu"/>
-                            <constraint firstItem="Dra-mu-9pE" firstAttribute="top" secondItem="B4r-VU-HDc" secondAttribute="bottom" constant="63" id="g6K-wx-YAi"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="18j-aH-s5G" secondAttribute="trailing" constant="20" symbolic="YES" id="gl9-io-HOs"/>
-                            <constraint firstItem="Dra-mu-9pE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="tWu-eW-SzZ"/>
-                            <constraint firstItem="Dra-mu-9pE" firstAttribute="leading" secondItem="18j-aH-s5G" secondAttribute="leading" id="u23-np-OXw"/>
-                            <constraint firstItem="Dra-mu-9pE" firstAttribute="leading" secondItem="B4r-VU-HDc" secondAttribute="leading" id="v3d-jw-bVF"/>
-                            <constraint firstItem="Dra-mu-9pE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="246" id="wkQ-5c-0Cx"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fIE-kA-CF9"/>
                 </viewController>

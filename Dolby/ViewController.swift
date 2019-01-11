@@ -34,6 +34,10 @@ class ViewController: UIViewController {
     @IBAction func transition(_ sender: Any) {
         self.navigationController?.pushViewController(DyTransitionViewController(), animated: true)
     }
+ 
     
+    @IBAction func generator(_ sender: Any) {
+        self.navigationController?.pushViewController(DyGeneratorController(), animated: true)
+    }
 }
 

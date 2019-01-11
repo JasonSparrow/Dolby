@@ -77,8 +77,8 @@
     [self.imageGenerator generateCGImagesAsynchronouslyForTimes:times
                                               completionHandler:handler];
     
-    //    [self.imageGenerator generateCGImagesAsynchronouslyForTimes:times completionHandler:^(CMTime requestedTime, CGImageRef  _Nullable image, CMTime actualTime, AVAssetImageGeneratorResult result, NSError * _Nullable error) {
-    //
-    //    }];
+//    [self.imageGenerator generateCGImagesAsynchronouslyForTimes:times completionHandler:^(CMTime requestedTime, CGImageRef  _Nullable image, CMTime actualTime, AVAssetImageGeneratorResult result, NSError * _Nullable error) {
+//
+//    }];
 }
 @end

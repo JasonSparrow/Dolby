@@ -46,6 +46,7 @@
 		96413D1721DC5E910055A0A2 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96413D1421DC5E900055A0A2 /* 1.jpeg */; };
 		96413D1821DC5E910055A0A2 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96413D1521DC5E910055A0A2 /* 2.jpeg */; };
 		96413D1921DC5E910055A0A2 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96413D1621DC5E910055A0A2 /* 3.jpeg */; };
+		9647BFEE21E832D50096DB3B /* DyGeneratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647BFED21E832D50096DB3B /* DyGeneratorController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		96413D1421DC5E900055A0A2 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 		96413D1521DC5E910055A0A2 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		96413D1621DC5E910055A0A2 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		9647BFED21E832D50096DB3B /* DyGeneratorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyGeneratorController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 				2505A2131FE8FFD200407BED /* DyReverseViewController.swift */,
 				2505A2C51FEA95CD00407BED /* DyStopViewController.h */,
 				2505A2C61FEA95CD00407BED /* DyStopViewController.m */,
+				9647BFED21E832D50096DB3B /* DyGeneratorController.swift */,
 				25C173CF1FDE8C6A00A64622 /* Dolby-Bridging-Header.h */,
 				962DF3C71FC058DD00B46309 /* Main.storyboard */,
 				962DF3CA1FC058DD00B46309 /* Assets.xcassets */,
@@ -383,6 +386,7 @@
 				2505A2AC1FEA55AD00407BED /* DyPictureToVideo.swift in Sources */,
 				962DF3C41FC058DD00B46309 /* AppDelegate.swift in Sources */,
 				25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */,
+				9647BFEE21E832D50096DB3B /* DyGeneratorController.swift in Sources */,
 				25DA65741FEBA15A002BD064 /* APLCompositionDebugView.m in Sources */,
 				2505A20D1FE8EEFF00407BED /* DyReverseVideo.m in Sources */,
 				25864E731FECA52A00DFBEDC /* DyReverse.swift in Sources */,

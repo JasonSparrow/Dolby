@@ -8,3 +8,4 @@
 #import "DyReverseVideo.h"
 #import "DyStopMotion.h"
 #import "DyStopViewController.h"
+#import "DyGenerateThumbnails.h"
