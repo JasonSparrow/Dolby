@@ -14,8 +14,8 @@ class DyFixOrientation: NSObject {
      * 获取视频方向(角度)
      * transform: 参数为轨道的CGAffineTransform
      */
-    class func orientationFromTransform(transform: CGAffineTransform) -> (orientation: UIImageOrientation, isPortrait: Bool) {
-        var assetOrientation = UIImageOrientation.up
+    class func orientationFromTransform(transform: CGAffineTransform) -> (orientation: UIImage.Orientation, isPortrait: Bool) {
+        var assetOrientation = UIImage.Orientation.up
         var isPortrait = false
         if transform.a == 0 && transform.b == 1.0 && transform.c == -1.0 && transform.d == 0 {
             assetOrientation = .right
@@ -46,7 +46,7 @@ class DyFixOrientation: NSObject {
             scaleToFitRatio = UIScreen.main.bounds.width / assetTrack.naturalSize.height
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
             instruction.setTransform(assetTrack.preferredTransform.concatenating(scaleFactor),
-                                     at: kCMTimeZero)
+                                     at: CMTime.zero)
         } else {
             let scaleFactor = CGAffineTransform(scaleX: scaleToFitRatio, y: scaleToFitRatio)
             var concat = assetTrack.preferredTransform.concatenating(scaleFactor).concatenating(CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.width / 2))
@@ -57,7 +57,7 @@ class DyFixOrientation: NSObject {
                 let centerFix = CGAffineTransform(translationX: assetTrack.naturalSize.width, y: yFix)
                 concat = fixUpsideDown.concatenating(centerFix).concatenating(scaleFactor)
             }
-            instruction.setTransform(concat, at: kCMTimeZero)
+            instruction.setTransform(concat, at: CMTime.zero)
         }
         return instruction
     }

@@ -26,11 +26,12 @@
     
     //获取资源的全部时间
     CMTime duration = asset.duration;
-    
+    Float64 dur = CMTimeGetSeconds(duration);
+    NSLog(@"%f", CMTimeGetSeconds(duration));
     NSMutableArray *times = [NSMutableArray array];
     //将视频时间轴平均分成20个CMTime值, 步长
     //increment = 300
-    CMTimeValue increment = duration.value / 20;
+    CMTimeValue increment = duration.value / (dur / 7);
     
     //开始的时间, 开始循环遍历整个资源的时间点. 值为0则代表从资源的开头开始遍历
     CMTimeValue currentValue = 0;

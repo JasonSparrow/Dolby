@@ -47,6 +47,7 @@
 		96413D1821DC5E910055A0A2 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96413D1521DC5E910055A0A2 /* 2.jpeg */; };
 		96413D1921DC5E910055A0A2 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 96413D1621DC5E910055A0A2 /* 3.jpeg */; };
 		9647BFEE21E832D50096DB3B /* DyGeneratorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9647BFED21E832D50096DB3B /* DyGeneratorController.swift */; };
+		96B904D921EF4DEB00FACAC6 /* BYLoadingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B904D821EF4DEB00FACAC6 /* BYLoadingLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		96413D1521DC5E910055A0A2 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		96413D1621DC5E910055A0A2 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
 		9647BFED21E832D50096DB3B /* DyGeneratorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyGeneratorController.swift; sourceTree = "<group>"; };
+		96B904D821EF4DEB00FACAC6 /* BYLoadingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BYLoadingLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		962DF3C21FC058DD00B46309 /* Dolby */ = {
 			isa = PBXGroup;
 			children = (
+				96B904D821EF4DEB00FACAC6 /* BYLoadingLayer.swift */,
 				25DA65711FEBA159002BD064 /* Debug */,
 				2505A2C81FEAA06D00407BED /* Transition */,
 				2505A2AA1FEA405C00407BED /* PicsConvertVideo */,
@@ -384,6 +387,7 @@
 				25864E761FECA84900DFBEDC /* DyConvertImage.m in Sources */,
 				2505A2011FE8188300407BED /* DyAddBorderToVideo.m in Sources */,
 				2505A2AC1FEA55AD00407BED /* DyPictureToVideo.swift in Sources */,
+				96B904D921EF4DEB00FACAC6 /* BYLoadingLayer.swift in Sources */,
 				962DF3C41FC058DD00B46309 /* AppDelegate.swift in Sources */,
 				25E24FAC1FE65621003C4EFB /* DyAnimationViewController.m in Sources */,
 				9647BFEE21E832D50096DB3B /* DyGeneratorController.swift in Sources */,
@@ -538,7 +542,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dolby/Dolby-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -558,7 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uubee.sirbaylor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dolby/Dolby-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

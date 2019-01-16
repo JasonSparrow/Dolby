@@ -38,9 +38,9 @@ class DyMergeVideo: NSObject {
             
             //2.2把视频资源插入到视频轨道里面
             do {
-                try firstTrack.insertTimeRange(CMTimeRangeMake(kCMTimeZero, firstAsset.duration), //设置时间
+                try firstTrack.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: firstAsset.duration), //设置时间
                     of: firstAsset.tracks(withMediaType: AVMediaType.video)[0] , //获取视频轨道
-                    at: kCMTimeZero)
+                    at: CMTime.zero)
             } catch _ {
                 print("Failed to load first track")
             }
@@ -48,7 +48,7 @@ class DyMergeVideo: NSObject {
             let secondTrack = mixComposition.addMutableTrack(withMediaType: AVMediaType.video,
                                                              preferredTrackID: Int32(kCMPersistentTrackID_Invalid))
             do {
-                try secondTrack?.insertTimeRange(CMTimeRangeMake(kCMTimeZero, secondAsset.duration),
+                try secondTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: secondAsset.duration),
                                                  of: secondAsset.tracks(withMediaType: AVMediaType.video)[0] ,
                                                 at: firstAsset.duration)
             } catch _ {
@@ -59,7 +59,7 @@ class DyMergeVideo: NSObject {
             //AVMutableVideoCompositionInstruction：一个指令，决定一个timeRange内每个轨道的状态，包含多个layerInstruction；
             let mainInstruction = AVMutableVideoCompositionInstruction()
             //设置时间
-            mainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeAdd(firstAsset.duration, secondAsset.duration))
+            mainInstruction.timeRange = CMTimeRangeMake(start: CMTime.zero, duration: CMTimeAdd(firstAsset.duration, secondAsset.duration))
             
             // 2.2
             //修正方向
@@ -74,7 +74,7 @@ class DyMergeVideo: NSObject {
             let mainComposition = AVMutableVideoComposition()
             mainComposition.instructions = [mainInstruction]
             //设置视频帧率为30帧
-            mainComposition.frameDuration = CMTimeMake(1, 30)
+            mainComposition.frameDuration = CMTimeMake(value: 1, timescale: 30)
             mainComposition.renderSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             
             
@@ -82,9 +82,9 @@ class DyMergeVideo: NSObject {
             if let loadedAudioAsset = audioAsset {
                 let audioTrack = mixComposition.addMutableTrack(withMediaType: AVMediaType.audio, preferredTrackID: 0)
                 do {
-                    try audioTrack?.insertTimeRange(CMTimeRangeMake(kCMTimeZero, CMTimeAdd(firstAsset.duration, secondAsset.duration)),
+                    try audioTrack?.insertTimeRange(CMTimeRangeMake(start: CMTime.zero, duration: CMTimeAdd(firstAsset.duration, secondAsset.duration)),
                                                     of: loadedAudioAsset.tracks(withMediaType: AVMediaType.audio)[0] ,
-                                                   at: kCMTimeZero)
+                                                    at: CMTime.zero)
                 } catch _ {
                     print("Failed to load audio track")
                 }

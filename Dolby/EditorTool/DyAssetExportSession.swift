@@ -33,7 +33,7 @@ class DyAssetExportSession: NSObject {
     }
     
     class func exportDidFinish(session: AVAssetExportSession) {
-        if session.status == AVAssetExportSessionStatus.completed {
+        if session.status == AVAssetExportSession.Status.completed {
             let outputURL = session.outputURL
             let library = ALAssetsLibrary()
             if library.videoAtPathIs(compatibleWithSavedPhotosAlbum: outputURL) {
