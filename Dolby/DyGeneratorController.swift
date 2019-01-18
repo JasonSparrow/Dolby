@@ -9,6 +9,7 @@
 import UIKit
 
 class DyGeneratorController: UITableViewController {
+    let loading = BYLoadingLayer.init(frame: CGRect.init(x: 0, y: 0, width: 50, height: 50))
 
     var list:[UIImage] = []
     override func viewDidLoad() {
@@ -16,7 +17,6 @@ class DyGeneratorController: UITableViewController {
         let url = URL.init(string: "https://biyou-file.oss-cn-hangzhou.aliyuncs.com/content/video/20181026152625749.mp4")!
         let asset = AVAsset.init(url: url)
         
-        let loading = BYLoadingLayer.init(frame: CGRect.init(x: 0, y: 0, width: 50, height: 50))
         loading.center = self.view.center
         self.view.addSubview(loading)
         
@@ -25,7 +25,6 @@ class DyGeneratorController: UITableViewController {
             generate.generateThumbnails(asset)
             generate.callback = { list in
                 self.list = list!
-                loading.removeFromSuperview()
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -51,6 +50,10 @@ class DyGeneratorController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        loading.isHidden = false
     }
 
 }
